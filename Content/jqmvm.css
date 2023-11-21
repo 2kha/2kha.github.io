@@ -59,7 +59,7 @@ svg {
     opacity:1;
 }
 
-.map-zoomin, .map-zoomout, .map-polygon {
+.map-zoomin, .map-zoomout, .map-back, .map-polygon {
     position: absolute;
     left: 20px;
     -webkit-border-radius: 3px;
@@ -77,19 +77,28 @@ svg {
     vertical-align: middle;
     user-select: none;
 }
-.map-zoomin
-{
-	top: 30px;
-}
-.map-zoomout
-{
-	top: 60px;
-}
 
 .map-polygon
 {
-    top: 90px;
+    top: 30px;
 }
+
+
+.map-zoomin
+{
+	top: 60px;
+}
+.map-zoomout
+{
+	top: 90px;
+}
+
+
+.map-back
+{
+    top: 120px;
+}
+
 
 .marked {
     color:  #FFC300 !important;
