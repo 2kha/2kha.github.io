@@ -1,0 +1,398 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Than Lwin Aung</title>
+
+    <link rel="stylesheet" href="./Content/font-awesome.min.css" />
+    <link rel="stylesheet" href="./Content/custom.css" />
+    <link rel="stylesheet" href="./Content/material-icons.css" type='text/css' media='all' />
+
+    <link href="./Content/style.css" rel="stylesheet" />
+    <link href="./Content/chosen.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./Scripts/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.css" />
+    <link rel="stylesheet" href="./Scripts/jQuery-File-Upload-9.12.3/css/jquery.fileupload.css" />
+    <link href="./Scripts/colorpicker/dist/jquery.colorpicker.bygiro.css" rel="stylesheet" />
+
+    <link href="./Scripts/RailRoadDiagram/railroad-diagrams.css" rel="stylesheet" />
+    <link href="./Scripts/json-viewer/jquery.json-viewer.css" rel="stylesheet" />
+
+    <link href="./Scripts/audioplayer/css/green-audio-player.css" rel="stylesheet" />
+    <link href="./Scripts/tooltip/jquery.webui-popover.css" rel="stylesheet" />
+    <link href="./Scripts/audiorecorder/manage-audio.css" rel="stylesheet" />
+
+
+
+    <script type='text/javascript' src="./Scripts/modernizr-2.6.2.js"></script>
+    <script type='text/javascript' src="./Scripts/jquery-1.10.2.js"></script>
+    <script type='text/javascript' src="./Scripts/bootstrap.js"></script>
+
+
+    <script type='text/javascript' src="./Scripts/jqueryui/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type='text/javascript' src="./Scripts/jQuery-File-Upload-9.12.3/js/jquery.fileupload.js"></script>
+    <script type='text/javascript' src="./Scripts/ckeditor/ckeditor.js"></script>
+    <script src="./Scripts/ckeditor/styles.js"></script>
+    <script type='text/javascript' src="./Scripts/ckeditor/adapters/jquery.js"></script>
+
+    <script type='text/javascript' src="./Scripts/RailRoadDiagram/railroad-diagrams.js"></script>
+    <script type='text/javascript' src="./Scripts/json-viewer/jquery.json-viewer.js"></script>
+    <script type='text/javascript' src="./Scripts/jquery.change.type.js"></script>
+    <script type='text/javascript' src="./Scripts/underscore.js"></script>
+    <script type='text/javascript' src="./Scripts/app/script.js"></script>
+    <script src="./Scripts/audioplayer/js/green-audio-player.js"></script>
+    <script src="./Scripts/tooltip/jquery.webui-popover.js"></script>
+    <script src="./Scripts/sketchpad/json2.js"></script>
+    <script src="./Scripts/sketchpad/raphael-2.0.1.js"></script>
+    <script src="./Scripts/sketchpad/raphael.sketchpad.js"></script>
+    <script src="./Scripts/chosen.jquery.js"></script>
+    <script src="./Scripts/audiorecorder/recorder.js"></script>
+    <script src="./Scripts/colorpicker/dist/jquery.colorpicker.bygiro.js"></script>
+
+
+</head>
+<body>
+
+    <header class="noo-header" id="noo-header">
+        <div class="navbar-wrapper">
+            <div class="navbar navbar-default fixed-top shrinkable">
+                <div class="container-boxed max">
+                    <div class="navbar-header">
+                        <h1 class="sr-only">Research Areas</h1>
+
+                        
+                        <a class="navbar-toggle main-toggle collapsed" style="height:auto; line-height:50px;" title="Main Menu" data-toggle="collapse" data-target=".noo-navbar-collapse">
+                            <span class="sr-only">Navigation</span>
+                            <i style="font-size:20px;" class="fa fa-bars"></i>
+                        </a>
+                    </div>
+
+
+                    <nav class="collapse navbar-collapse noo-navbar-collapse">
+                        <ul class="navbar-nav sf-menu">
+                            <li class="current-menu-item align-left">
+                                <a href="./index.html">Home</a>
+                            </li>
+
+                            <li class="align-left">
+                                <a href="./about.html">About Me</a>
+                            </li>
+
+
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div  id="main-body" class="container body-content">
+       
+        <div class="container-wrap">
+    <div class="main-content offset" style="padding-top:20px !important;">
+
+       
+        <br />
+        <br />
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+					<h3>Synatatic and Semantic Analysis of Language</h3>
+					<hr>
+					
+					<p>
+						Actually, analysis of a Langauge consists of three primary aspects: words, structures and meanings. The syntatics defines the relationship between words and structures, while the semantics defines the relationships between syntax and meangings. Therefore, any spelling and grammar checking involves three aspects as well. It is to check the correctness of words, the correctness of structural relationships and finally the correctness of meanings.
+					</p>
+					
+					<p>
+						"Colorless green ideas sleep furioulsy". Noam Chomsky once said it to point out that a sentence can be syntatically correct but semantically wrong.
+					</p>
+					
+					<p>
+						In English, fortunately, words have clear word-boundaries which are seperated by "Space". Therefore, each individual word can be checked against a dictionary, and so, spelling check is pretty much a trivial task for most cases. However, in Myanmar (မြန်မာ), it is not the case; words are not seperated by a Space, and words have no clear word-boundry, which makes spelling checking a bit challenging.
+					</p>
+					
+					<p>
+						"It is an apple." Words are seperated by Space.  "ဒါသည်ပန်းသီးဖြစ်ပါသည်။" Words are not necessarily seperated by Space.
+					</p>
+					
+					<p>
+						In English, sentences are formed with Subject + Verb + Object, and therefore, the positions of Subject, Verb and Object are important. However, it is not the case with Myanmar (မြန်မာ). The positions of the phrases are not very important as long as a sentence is ended with a Verb.
+					</p>
+					
+					<p>
+						However, in any language, it is common that the closer the positions of words, the stronger the relationship between them. Actually, it is one of the reasons why "Attention Mechanism" works in Language Model. 
+					</p>
+					
+					<p>
+						Therefore, it is assumed that the adjacency relationship between words could be analzyed to check the structures of words. Based on that assumption, Grammar is analzyed based on Adjacency Relationship.
+					</p>
+					
+					<img src="./images/dependency.png" style="width:70%; height:auto; display:inline-block; margin-top:-10px;" />					
+				</div>
+            </div>
+        </div>
+		
+		<br />
+		<br />
+		 
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                   <h3>Dependency Tree</h3>	
+
+				   <hr>
+					
+					<p>
+						In any language, a dependency tree can define the adjacency relationship between words.
+					</p>
+					<img src="./images/dependenttree.png" style="width:70%; height:auto; display:inline-block; margin-top:-10px;" />					
+				</div>
+            </div>
+        </div>
+		
+		<br />
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                   <strong>Original Myanmar Text</strong>
+					<hr>
+					<p>
+						မောင်မောင်ကခွေးကိုတုတ်နှင့်ရိုက်သည်။
+					</p>
+					<hr>
+					<p>
+						There are no word-boundaries in the original sentence. However, Word Class Analysis can detect word-boundaries as well as Word Classes.
+					</p>
+					
+					
+				</div>
+            </div>
+        </div>
+        
+        <div class="row box-3">
+            <div class="col-md-12">
+					
+					
+					
+					<span class="label label-default" title="Noun" style="margin:3px; font-size:12px;font-weight:100;display:inline-block; color:#c78000;">
+						မောင်မောင်က
+					</span>
+					<span class="label label-default" title="Noun" style="margin:3px; font-size:12px;font-weight:100;display:inline-block; color:#c78000;">
+						ခွေးကို
+					</span>
+					<span class="label label-default" title="Noun" style="margin:3px; font-size:12px;font-weight:100;display:inline-block; color:#c78000;">
+						တုတ်
+					</span>
+					<span class="label label-default" title="Prepositional" style="margin:3px; font-size:12px;font-weight:100;display:inline-block; color:#960037;">
+						နှင့်
+					</span>
+					<span class="label label-default" title="Verb" style="margin:3px; font-size:12px;font-weight:100;display:inline-block; color:#0252b4;">
+						ရိုက်သည်
+					</span>
+					<span class="label label-default" title="Terminal" style="margin:3px; font-size:12px;font-weight:100;display:inline-block; color:#000;">
+						။
+					</span>
+
+            </div>
+        </div> 
+		
+		<div class="row box-3" style="overflow:auto;">
+			<div class="col-md-12">
+				<div>					
+					<svg class="railroad-diagram" width="394.5" height="122" viewBox="0 0 394.5 122"><g transform="translate(.5 .5)"><g><path d="M20 21v20m0 -10h20"></path></g><g><path d="M40 31h0"></path><path d="M354.5 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M334.5 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M148 31h0"></path><rect x="60" y="20" width="88" height="22" rx="10" ry="10"></rect><text x="104" y="35">ရိုက်သည်</text></g><path d="M148 31h10"></path><g><path d="M158 31h0"></path><path d="M334.5 31h0"></path><path d="M158 31h20"></path><g><path d="M178 31h0"></path><path d="M314.5 31h0"></path><g class="terminal"><path d="M178 31h0"></path><path d="M240.5 31h0"></path><rect x="178" y="20" width="62.5" height="22" rx="10" ry="10"></rect><text x="209.25" y="35">နှင့်</text></g><path d="M240.5 31h10"></path><path d="M250.5 31h10"></path><g><path d="M260.5 31h0"></path><path d="M314.5 31h0"></path><g class="terminal"><path d="M260.5 31h0"></path><path d="M314.5 31h0"></path><rect x="260.5" y="20" width="54" height="22" rx="10" ry="10"></rect><text x="287.5" y="35">တုတ်</text></g></g></g><path d="M314.5 31h20"></path><path d="M158 31a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path><g><path d="M178 61h28.5"></path><path d="M286 61h28.5"></path><g class="terminal"><path d="M206.5 61h0"></path><path d="M286 61h0"></path><rect x="206.5" y="50" width="79.5" height="22" rx="10" ry="10"></rect><text x="246.25" y="65">ခွေးကို</text></g></g><path d="M314.5 61a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path><path d="M158 31a10 10 0 0 1 10 10v40a10 10 0 0 0 10 10"></path><g><path d="M178 91h11.5"></path><path d="M303 91h11.5"></path><g class="terminal"><path d="M189.5 91h0"></path><path d="M303 91h0"></path><rect x="189.5" y="80" width="113.5" height="22" rx="10" ry="10"></rect><text x="246.25" y="95">မောင်မောင်က</text></g></g><path d="M314.5 91a10 10 0 0 0 10 -10v-40a10 10 0 0 1 10 -10"></path></g></g><path d="M334.5 31h20"></path></g><path d="M 354.5 31 h 20 m 0 -10 v 20"></path></g></svg>
+				</div>
+			</div>
+		</div>		
+	
+		
+		<div class="row box-3">
+			<div class="col-md-12">
+				<div>				
+					<table style="width:100%;">
+						<tr>
+							<td>
+							</td>
+							<td>
+								ရိုက်သည်။
+							</td>
+							<td>
+								နှင့်
+							</td>
+							<td>
+								တုတ်
+							</td>
+							<td>
+								ခွေးကို
+							</td>
+							<td>
+								မောင်မောင်က
+							</td>
+						</tr>
+						<tr>
+							<td>
+								ရိုက်သည်။
+							</td>
+							<td>
+								0
+							</td>
+							<td>
+								1
+							</td>
+							<td>
+								2
+							</td>
+							<td>
+								1
+							</td>
+							<td>
+								1
+							</td>
+						</tr>
+						<tr>
+							<td>
+								နှင့်
+							</td>
+							<td>
+								1
+							</td>
+							<td>
+								0
+							</td>
+							<td>
+								1
+							</td>
+							<td>
+								INF
+							</td>
+							<td>
+								INF
+							</td>
+						</tr>
+						<tr>
+							<td>
+								တုတ်
+							</td>
+							<td>
+								2
+							</td>
+							<td>
+								1
+							</td>
+							<td>
+								0
+							</td>
+							<td>
+								INF
+							</td>
+							<td>
+								INF
+							</td>
+						</tr>
+						<tr>
+							<td>
+								ခွေးကို
+							</td>
+							<td>
+								1
+							</td>
+							<td>
+								INF
+							</td>
+							<td>
+								INF
+							</td>
+							<td>
+								0
+							</td>
+							<td>
+								INF
+							</td>
+						</tr>
+						<tr>
+							<td>
+								မောင်မောင်က
+							</td>
+							<td>
+								1
+							</td>
+							<td>
+								INF
+							</td>
+							<td>
+								INF
+							</td>
+							<td>
+								INF
+							</td>
+							<td>
+								0
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+       
+        <br />
+
+        <div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                    <svg height="32" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                    <a href="https://github.com/2kha" target="_blank" style="margin-left:50px; margin-top:-35px; display:block;">Please find me more on Github...</a>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+    </div>
+</div>
+      
+
+        <div class="modal fade" id="suggestion-popup" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-member">
+                <div class="modal-content">
+                    <div class="modal-header" style="border:none;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4>Suggestion</h4>
+                    </div>
+                    <div class="modal-body" style="padding:0px;">
+
+                        <div id="suggestion-container" style="height:300px; overflow-y:auto;">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+  <footer>
+            <p>&copy; <span id="c-date"></span> - Than Lwin Aung</p>
+        </footer>
+
+    </div>
+
+	<script>
+	
+		$(document).ready(function(){
+		
+		
+			var date = new Date();
+			var year = date.getFullYear();
+			
+			$("#c-date").html(year);
+		});
+	</script>
+</body>
+</html>

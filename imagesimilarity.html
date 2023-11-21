@@ -1,0 +1,388 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Than Lwin Aung</title>
+
+    <link rel="stylesheet" href="./Content/font-awesome.min.css" />
+    <link rel="stylesheet" href="./Content/custom.css" />
+    <link rel="stylesheet" href="./Content/material-icons.css" type='text/css' media='all' />
+
+    <link href="./Content/style.css" rel="stylesheet" />
+    <link href="./Content/chosen.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./Scripts/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.css" />
+    <link rel="stylesheet" href="./Scripts/jQuery-File-Upload-9.12.3/css/jquery.fileupload.css" />
+    <link href="./Scripts/colorpicker/dist/jquery.colorpicker.bygiro.css" rel="stylesheet" />
+
+    <link href="./Scripts/RailRoadDiagram/railroad-diagrams.css" rel="stylesheet" />
+    <link href="./Scripts/json-viewer/jquery.json-viewer.css" rel="stylesheet" />
+
+    <link href="./Scripts/audioplayer/css/green-audio-player.css" rel="stylesheet" />
+    <link href="./Scripts/tooltip/jquery.webui-popover.css" rel="stylesheet" />
+    <link href="./Scripts/audiorecorder/manage-audio.css" rel="stylesheet" />
+
+
+
+    <script type='text/javascript' src="./Scripts/modernizr-2.6.2.js"></script>
+    <script type='text/javascript' src="./Scripts/jquery-1.10.2.js"></script>
+    <script type='text/javascript' src="./Scripts/bootstrap.js"></script>
+
+
+    <script type='text/javascript' src="./Scripts/jqueryui/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type='text/javascript' src="./Scripts/jQuery-File-Upload-9.12.3/js/jquery.fileupload.js"></script>
+    <script type='text/javascript' src="./Scripts/ckeditor/ckeditor.js"></script>
+    <script src="./Scripts/ckeditor/styles.js"></script>
+    <script type='text/javascript' src="./Scripts/ckeditor/adapters/jquery.js"></script>
+
+    <script type='text/javascript' src="./Scripts/RailRoadDiagram/railroad-diagrams.js"></script>
+    <script type='text/javascript' src="./Scripts/json-viewer/jquery.json-viewer.js"></script>
+    <script type='text/javascript' src="./Scripts/jquery.change.type.js"></script>
+    <script type='text/javascript' src="./Scripts/underscore.js"></script>
+    <script type='text/javascript' src="./Scripts/app/script.js"></script>
+    <script src="./Scripts/audioplayer/js/green-audio-player.js"></script>
+    <script src="./Scripts/tooltip/jquery.webui-popover.js"></script>
+    <script src="./Scripts/sketchpad/json2.js"></script>
+    <script src="./Scripts/sketchpad/raphael-2.0.1.js"></script>
+    <script src="./Scripts/sketchpad/raphael.sketchpad.js"></script>
+    <script src="./Scripts/chosen.jquery.js"></script>
+    <script src="./Scripts/audiorecorder/recorder.js"></script>
+    <script src="./Scripts/colorpicker/dist/jquery.colorpicker.bygiro.js"></script>
+
+
+</head>
+<body>
+
+    <header class="noo-header" id="noo-header">
+        <div class="navbar-wrapper">
+            <div class="navbar navbar-default fixed-top shrinkable">
+                <div class="container-boxed max">
+                    <div class="navbar-header">
+                        <h1 class="sr-only">Research Areas</h1>
+
+                        
+                        <a class="navbar-toggle main-toggle collapsed" style="height:auto; line-height:50px;" title="Main Menu" data-toggle="collapse" data-target=".noo-navbar-collapse">
+                            <span class="sr-only">Navigation</span>
+                            <i style="font-size:20px;" class="fa fa-bars"></i>
+                        </a>
+                    </div>
+
+
+                    <nav class="collapse navbar-collapse noo-navbar-collapse">
+                        <ul class="navbar-nav sf-menu">
+                            <li class="current-menu-item align-left">
+                                <a href="./index.html">Home</a>
+                            </li>
+
+                            <li class="align-left">
+                                <a href="./about.html">About Me</a>
+                            </li>
+
+
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div  id="main-body" class="container body-content">
+       
+        <div class="container-wrap">
+    <div class="main-content offset" style="padding-top:20px !important;">
+
+       
+        <br />
+        <br />
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+					<h3>Image Similarity Analysis</h3>
+					<hr>
+					
+					<p>
+						Nowadays, searching images by example has become an indispensable feature in any search engine.
+With the advent of Machine Learning, searching similar images can be achieved with Image Embedding and Auto-Encoder.
+However, searching similar images from thousands of images still require heavy computational power and resources.
+Therefore, for us, who lack expendable computing power and resources, need an alternative implementation to reduce the cost and complexity.
+With decent amount of Computing Power and Time Complexity, I am able to come up with an easy to implement Image Similarity Search with minimum computing resources.
+					</p>
+					
+					<p>
+						Generally Speaking, the Similarity between two images is determinded by a set of characteristics, commonly known as Features. The primary features which are dominant in determining similarity are "Key Features".
+					</p>
+					
+					<p>
+						It is assumed tha Key Features of an Image is deinfed by:
+					</p>
+					<ul>
+						<li>
+							Color
+						</li>
+						<li>
+							Shape
+						</li>
+						<li>
+							Texture
+						</li>
+					</ul>
+										
+				</div>
+            </div>
+        </div>
+		
+		<br />
+		<br />
+		 
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                   <strong>Color Distribution</strong>	
+
+				   <hr>
+				   
+				   <p>
+				    A Color Image has 3 Channels (Red, Green, Blue) with corresponding Intensity Distribution.
+
+					However only distribution of dominant colors play an important role in determining the
+					Image Color.Since it is difficult to analyze millions of colors, dominant colors are also normalized to
+					defined sets ofcolors Global Color Spectrum. Color Spectrum is immune to Scale,
+					Rotation and Translation.
+					</p>
+					<br>
+					
+					<img src="./images/colordistribution.png" style="width:80%; height:auto; display:inline-block; margin-top:-10px;" />					
+				</div>
+            </div>
+        </div>
+		
+		<br />		
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                   <strong>Image Shape defined by Contour</strong>	
+
+				   <hr>
+				   
+				   <p>
+						Shape of an Image can be defined by Outline (Contour) of an Image.
+					</p>
+					<br>
+					
+					<img src="./images/imagecontour.png" style="width:80%; height:auto; display:inline-block; margin-top:-10px;" />					
+				</div>
+            </div>
+        </div>
+	
+		<br/>
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                   <strong>Key Points as Shape Feature</strong>	
+
+				   <hr>
+				   
+				   <p>
+						From the outline of the image, the Key Points are extracted as Shape Feature.  
+					</p>
+					
+					<br>
+					
+					<img src="./images/imagekeypoints.png" style="width:80%; height:auto; display:inline-block; margin-top:-10px;" />					
+				</div>
+            </div>
+        </div>
+	
+		<br/>
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                   <strong>SURF Features</strong>	
+
+				   <hr>
+				   
+				   
+					<img src="./images/surfdescriptor.png" style="width:70%; height:auto; display:inline-block; margin-top:-10px;" />					
+				</div>
+            </div>
+        </div>
+	
+		<br/>
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                   <strong>Texture defined by spatial color profile.</strong>	
+
+				   <hr>
+				   
+				   <p>
+						Texture of an image is roughly defined as spatial local color profile. Unlike global color spectrum, local color profile can be subjected to scale, translation and rotation.
+					</p>
+					
+					<p>
+						Spatial Color Distribution specifies the distribution of dominant colors in specific regions
+						(sections). Normally, a region is M x N Grid and in each region, dominant color iscalculated
+					</p>
+					<br>
+					
+					<img src="./images/colorspatialdistribution.png" style="width:80%; height:auto; display:inline-block; margin-top:-10px;" />					
+				</div>
+            </div>
+        </div>
+	
+		<br/>
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                   <strong>CRAFT Results for Text Spotting</strong>	
+
+				   <hr>
+				   
+				   <p>
+					Similarity between images is calculated by kNN (k Nearest Neighbour) distance and the distance is ranked to calculate the most similar images.
+					</p>
+					
+					<p>
+						To reduce the work-load of computation for kNN in real time, Map-Reduce Pipeline is used. 
+					</p>
+					
+					<br>
+					
+					<img src="./images/mapreduce.png" style="width:80%; height:auto; display:inline-block; margin-top:-10px;" />					
+				</div>
+            </div>
+        </div>
+	
+		<br/>
+
+		<br/>
+
+        <div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                    <svg height="32" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                    <a href="https://github.com/2kha" target="_blank" style="margin-left:50px; margin-top:-35px; display:block;">Please find me more on Github...</a>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+    </div>
+</div>
+      
+
+        <div class="modal fade" id="suggestion-popup" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-member">
+                <div class="modal-content">
+                    <div class="modal-header" style="border:none;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4>Suggestion</h4>
+                    </div>
+                    <div class="modal-body" style="padding:0px;">
+
+                        <div id="suggestion-container" style="height:300px; overflow-y:auto;">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+  <footer>
+            <p>&copy; <span id="c-date"></span> - Than Lwin Aung</p>
+        </footer>
+
+    </div>
+
+	<script>
+	
+		$(document).ready(function(){
+		
+		
+			var date = new Date();
+			var year = date.getFullYear();
+			
+			$("#c-date").html(year);
+			
+			  $("#syllable-bx-mm").unbind().bind("click", function () {
+
+			  if ($("#syllable-bx-mm").is(":checked")) {
+				  $("#text-bx-mm").prop('checked', false);
+
+				  $(".syllables-mm").show();
+				  $(".labels-mm").hide();
+			  }
+			  else {
+
+				  $("#text-bx-mm").prop('checked', false);
+
+				  $(".syllables-mm").hide();
+				  $(".labels-mm").hide();
+			  }
+		  });
+
+		  $("#text-bx-mm").unbind().bind("click", function () {
+			  if ($("#text-bx-mm").is(":checked")) {
+				  $("#syllable-bx-mm").prop('checked', false);
+
+				  $(".syllables-mm").hide();
+				  $(".labels-mm").show();
+			  }
+			  else {
+				  $("#syllable-bx-mm").prop('checked', false);
+
+
+				  $(".syllables-mm").hide();
+				  $(".labels-mm").hide();
+			  }
+		  });
+		  
+		   $("#syllable-bx-en").unbind().bind("click", function () {
+
+			  if ($("#syllable-bx-en").is(":checked")) {
+				  $("#text-bx-en").prop('checked', false);
+
+				  $(".syllables-en").show();
+				  $(".labels-en").hide();
+			  }
+			  else {
+
+				  $("#text-bx-en").prop('checked', false);
+
+				  $(".syllables-en").hide();
+				  $(".labels-en").hide();
+			  }
+		  });
+
+		  $("#text-bx-en").unbind().bind("click", function () {
+			  if ($("#text-bx-en").is(":checked")) {
+				  $("#syllable-bx-en").prop('checked', false);
+
+				  $(".syllables-en").hide();
+				  $(".labels-en").show();
+			  }
+			  else {
+				  $("#syllable-bx-en").prop('checked', false);
+
+
+				  $(".syllables-en").hide();
+				  $(".labels-en").hide();
+			  }
+		  });
+		});
+	</script>
+</body>
+</html>

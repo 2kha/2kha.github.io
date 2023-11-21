@@ -1,0 +1,230 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Than Lwin Aung</title>
+
+    <link rel="stylesheet" href="./Content/font-awesome.min.css" />
+    <link rel="stylesheet" href="./Content/custom.css" />
+    <link rel="stylesheet" href="./Content/material-icons.css" type='text/css' media='all' />
+
+    <link href="./Content/style.css" rel="stylesheet" />
+    <link href="./Content/chosen.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./Scripts/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.css" />
+    <link rel="stylesheet" href="./Scripts/jQuery-File-Upload-9.12.3/css/jquery.fileupload.css" />
+    <link href="./Scripts/colorpicker/dist/jquery.colorpicker.bygiro.css" rel="stylesheet" />
+
+    <link href="./Scripts/RailRoadDiagram/railroad-diagrams.css" rel="stylesheet" />
+    <link href="./Scripts/json-viewer/jquery.json-viewer.css" rel="stylesheet" />
+
+    <link href="./Scripts/audioplayer/css/green-audio-player.css" rel="stylesheet" />
+    <link href="./Scripts/tooltip/jquery.webui-popover.css" rel="stylesheet" />
+    <link href="./Scripts/audiorecorder/manage-audio.css" rel="stylesheet" />
+	<link href="./Content/jqmvm.css" rel="stylesheet" />
+
+
+
+    <script type='text/javascript' src="./Scripts/modernizr-2.6.2.js"></script>
+    <script type='text/javascript' src="./Scripts/jquery-1.10.2.js"></script>
+    <script type='text/javascript' src="./Scripts/bootstrap.js"></script>
+
+
+    <script type='text/javascript' src="./Scripts/jqueryui/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type='text/javascript' src="./Scripts/jQuery-File-Upload-9.12.3/js/jquery.fileupload.js"></script>
+    <script type='text/javascript' src="./Scripts/ckeditor/ckeditor.js"></script>
+    <script src="./Scripts/ckeditor/styles.js"></script>
+    <script type='text/javascript' src="./Scripts/ckeditor/adapters/jquery.js"></script>
+
+    <script type='text/javascript' src="./Scripts/RailRoadDiagram/railroad-diagrams.js"></script>
+    <script type='text/javascript' src="./Scripts/json-viewer/jquery.json-viewer.js"></script>
+    <script type='text/javascript' src="./Scripts/jquery.change.type.js"></script>
+    <script type='text/javascript' src="./Scripts/underscore.js"></script>
+    <script type='text/javascript' src="./Scripts/app/script.js"></script>
+    <script src="./Scripts/audioplayer/js/green-audio-player.js"></script>
+    <script src="./Scripts/tooltip/jquery.webui-popover.js"></script>
+    <script src="./Scripts/sketchpad/json2.js"></script>
+    <script src="./Scripts/sketchpad/raphael-2.0.1.js"></script>
+    <script src="./Scripts/sketchpad/raphael.sketchpad.js"></script>
+    <script src="./Scripts/chosen.jquery.js"></script>
+    <script src="./Scripts/audiorecorder/recorder.js"></script>
+    <script src="./Scripts/colorpicker/dist/jquery.colorpicker.bygiro.js"></script>
+	<script src="./Scripts/colorpicker/dist/jquery.colorpicker.bygiro.js"></script>
+	<script src="./Scripts/jqmvm.js"></script>
+
+
+</head>
+<body>
+
+    <header class="noo-header" id="noo-header">
+        <div class="navbar-wrapper">
+            <div class="navbar navbar-default fixed-top shrinkable">
+                <div class="container-boxed max">
+                    <div class="navbar-header">
+                        <h1 class="sr-only">Research Areas</h1>
+
+                        
+                        <a class="navbar-toggle main-toggle collapsed" style="height:auto; line-height:50px;" title="Main Menu" data-toggle="collapse" data-target=".noo-navbar-collapse">
+                            <span class="sr-only">Navigation</span>
+                            <i style="font-size:20px;" class="fa fa-bars"></i>
+                        </a>
+                    </div>
+
+
+                    <nav class="collapse navbar-collapse noo-navbar-collapse">
+                        <ul class="navbar-nav sf-menu">
+                            <li class="current-menu-item align-left">
+                                <a href="./index.html">Home</a>
+                            </li>
+
+                           
+
+                            <li class="align-left">
+                                <a href="./about.html">About Me</a>
+                            </li>
+
+
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div  id="main-body" class="container body-content">
+       
+        <div class="container-wrap">
+    <div class="main-content offset" style="padding-top:20px !important;">
+
+       
+		<div class="row box-3">      
+			<div class="col-md-12" >
+				<div id="title" style="text-align:center; font-size:20px; font-weight:bold; display:block;">
+					Myanmar Map
+				</div>
+				<div id="map" style="height:700px; width:100%;">
+				</div>
+			</div>
+		
+	</div>	
+
+	<script>
+
+		$(document).ready(function () {
+
+			var currentLevel = 0;
+			
+			//Please download SVG Map Files and put the url here. Please do not directly link to our github repository.
+			var svgUrl = "https://raw.githubusercontent.com/2kha/Visualizations/b6e9781e7dd5b08b53bf1f4f35271fb7cceaf93c/Myanmar%20Vector%20Map/src/svg/";
+			
+
+			var loadMap = function (level) {
+
+				var map1 = $("#map").jqMyanmarVectorMap({
+
+					Culture: "en",
+					SelectedColor: '#82FA58',
+					HoveredColor: '#d4e6f1',
+					DefaultColor: '#d2f5f3',
+					Data: [],
+					Level: level,
+					MapPath: svgUrl,
+					Drilldown: false,
+					Zoom: 1,
+					ShowTooltip: true,
+					OnLoad: function (regions) {
+					},
+					OnClick: function (item) {
+					},
+					OnDoubleClick: function (item) {
+							
+						var l = parseInt(item.id);
+
+						if (currentLevel == 0) {
+							currentLevel = 1;                               
+							loadMap(l);
+						}
+					},
+					OnHover: function (item) {
+
+					},
+					OnBack: function (level) {
+
+						currentLevel = 0;
+						loadMap(level);
+					}
+
+				});
+
+			};
+
+			loadMap(currentLevel);
+
+		});
+
+	</script>
+
+       
+        <br />
+
+        <div class="row box-3">
+            <div class="col-md-12">
+                <div">
+                    <svg height="32" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                    <a href="https://github.com/2kha" target="_blank" style="margin-left:50px; margin-top:-35px; display:block;">Please find me more on Github...</a>
+                </div">
+            </div>
+        </div>
+
+        <br />
+
+    </div>
+</div>
+      
+
+        <div class="modal fade" id="suggestion-popup" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-member">
+                <div class="modal-content">
+                    <div class="modal-header" style="border:none;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4>Suggestion</h4>
+                    </div>
+                    <div class="modal-body" style="padding:0px;">
+
+                        <div id="suggestion-container" style="height:300px; overflow-y:auto;">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <footer>
+            <p>&copy; <span id="c-date"></span> - Than Lwin Aung</p>
+        </footer>
+
+    </div>
+
+
+
+
+    <script>
+	
+		$(document).ready(function(){
+		
+		
+			var date = new Date();
+			var year = date.getFullYear();
+			
+			$("#c-date").html(year);
+		});
+	</script>
+</body>
+</html>
+

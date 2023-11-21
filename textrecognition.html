@@ -1,0 +1,599 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Than Lwin Aung</title>
+
+    <link rel="stylesheet" href="./Content/font-awesome.min.css" />
+    <link rel="stylesheet" href="./Content/custom.css" />
+    <link rel="stylesheet" href="./Content/material-icons.css" type='text/css' media='all' />
+
+    <link href="./Content/style.css" rel="stylesheet" />
+    <link href="./Content/chosen.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./Scripts/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.css" />
+    <link rel="stylesheet" href="./Scripts/jQuery-File-Upload-9.12.3/css/jquery.fileupload.css" />
+    <link href="./Scripts/colorpicker/dist/jquery.colorpicker.bygiro.css" rel="stylesheet" />
+
+    <link href="./Scripts/RailRoadDiagram/railroad-diagrams.css" rel="stylesheet" />
+    <link href="./Scripts/json-viewer/jquery.json-viewer.css" rel="stylesheet" />
+
+    <link href="./Scripts/audioplayer/css/green-audio-player.css" rel="stylesheet" />
+    <link href="./Scripts/tooltip/jquery.webui-popover.css" rel="stylesheet" />
+    <link href="./Scripts/audiorecorder/manage-audio.css" rel="stylesheet" />
+
+
+
+    <script type='text/javascript' src="./Scripts/modernizr-2.6.2.js"></script>
+    <script type='text/javascript' src="./Scripts/jquery-1.10.2.js"></script>
+    <script type='text/javascript' src="./Scripts/bootstrap.js"></script>
+
+
+    <script type='text/javascript' src="./Scripts/jqueryui/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type='text/javascript' src="./Scripts/jQuery-File-Upload-9.12.3/js/jquery.fileupload.js"></script>
+    <script type='text/javascript' src="./Scripts/ckeditor/ckeditor.js"></script>
+    <script src="./Scripts/ckeditor/styles.js"></script>
+    <script type='text/javascript' src="./Scripts/ckeditor/adapters/jquery.js"></script>
+
+    <script type='text/javascript' src="./Scripts/RailRoadDiagram/railroad-diagrams.js"></script>
+    <script type='text/javascript' src="./Scripts/json-viewer/jquery.json-viewer.js"></script>
+    <script type='text/javascript' src="./Scripts/jquery.change.type.js"></script>
+    <script type='text/javascript' src="./Scripts/underscore.js"></script>
+    <script type='text/javascript' src="./Scripts/app/script.js"></script>
+    <script src="./Scripts/audioplayer/js/green-audio-player.js"></script>
+    <script src="./Scripts/tooltip/jquery.webui-popover.js"></script>
+    <script src="./Scripts/sketchpad/json2.js"></script>
+    <script src="./Scripts/sketchpad/raphael-2.0.1.js"></script>
+    <script src="./Scripts/sketchpad/raphael.sketchpad.js"></script>
+    <script src="./Scripts/chosen.jquery.js"></script>
+    <script src="./Scripts/audiorecorder/recorder.js"></script>
+    <script src="./Scripts/colorpicker/dist/jquery.colorpicker.bygiro.js"></script>
+
+
+</head>
+<body>
+
+    <header class="noo-header" id="noo-header">
+        <div class="navbar-wrapper">
+            <div class="navbar navbar-default fixed-top shrinkable">
+                <div class="container-boxed max">
+                    <div class="navbar-header">
+                        <h1 class="sr-only">Research Areas</h1>
+
+                        
+                        <a class="navbar-toggle main-toggle collapsed" style="height:auto; line-height:50px;" title="Main Menu" data-toggle="collapse" data-target=".noo-navbar-collapse">
+                            <span class="sr-only">Navigation</span>
+                            <i style="font-size:20px;" class="fa fa-bars"></i>
+                        </a>
+                    </div>
+
+
+                    <nav class="collapse navbar-collapse noo-navbar-collapse">
+                        <ul class="navbar-nav sf-menu">
+                            <li class="current-menu-item align-left">
+                                <a href="./index.html">Home</a>
+                            </li>
+
+                            <li class="align-left">
+                                <a href="./about.html">About Me</a>
+                            </li>
+
+
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div  id="main-body" class="container body-content">
+       
+        <div class="container-wrap">
+    <div class="main-content offset" style="padding-top:20px !important;">
+
+       
+        <br />
+        <br />
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+					<h3>Text Spotting and Recognition</h3>
+					<hr>
+					
+					<p>
+						I have developed a Bilingual (English and Myanmar) Text Spotting and Recogntion based on CRAFT Model (Naver) and CRNN-CTC Model (WandB).
+					</p>
+					
+					<p>
+						Instead of End-to-End Text Recognition, I assume that it is better to use a modular approach, i.e., to train Text Spotting Model and Text Recognition Model seperately.   
+					</p>
+					
+					<p>
+						For Text Spotting Model, I think CRAFT (Naver) is more suitable because Myanmar Language, like Korean, is syllablic language, and it is trainable with Character Region Bounding Boxes.
+					</p>
+					
+					<p>
+						For Text Recognition Model, CRNN-CTC Model is used. However, although token length of 32 Characters is enough for English, it is not nearly enough for Myanmar Language. Therefore, I have to come up with my own tokenization scheme for Myanmar Language, which I call "Visual Syllabic Tokenization".
+					</p>
+					
+					<ul>
+						<li>
+							<a href="https://github.com/clovaai/CRAFT-pytorch" target="_blank" style="color:blue;">CRAFT Model (Naver)</a>
+						</li>
+					<li>
+						<a href="https://wandb.ai/authors/text-recognition-crnn-ctc/reports/Text-Recognition-With-CRNN-CTC-Network--VmlldzoxNTI5NDI" target="_blank" style="color:blue;">Text Recognition With CRNN-CTC Network</a>
+					</li>
+					</ul>
+										
+				</div>
+            </div>
+        </div>
+		
+		<br />
+		<br />
+		 
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                   <strong>Visual Syllabic Tokenization</strong>	
+
+				   <hr>
+				   
+				   <p>Instead of tokenizing character by character, Myanmar Words are tokenized into Visually Seperable Syllables (Left to Right).
+					</p>
+					<br>
+					
+					<img src="./images/visualsyllabictoken.png" style="width:80%; height:auto; display:inline-block; margin-top:-10px;" />					
+				</div>
+            </div>
+        </div>
+		
+		<br />		
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                   <strong>Gaussian Heatmaps for tokenized syllables</strong>	
+
+				   <hr>
+				   
+				   <p>Bounding Boxes are generated for tokenized syllables, and Gaussian Heatmaps are calculated for Text Threshold Regions and Link Threshold Regions.  
+					</p>
+					<br>
+					
+					<img src="./images/heatmap_craft.png" style="width:80%; height:auto; display:inline-block; margin-top:-10px;" />					
+				</div>
+            </div>
+        </div>
+	
+		<br/>
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                   <strong>CRAFT Results for Text Spotting</strong>	
+
+				   <hr>
+				   
+				   <p>
+					Bounding Boxes are generated for tokenized syllables, and Gaussian Heatmaps are calculated for Text Threshold Regions and Link Threshold Regions.  
+					</p>
+					
+					<br>
+					
+					<img src="./images/heatmap_result.png" style="width:80%; height:auto; display:inline-block; margin-top:-10px;" />					
+				</div>
+            </div>
+        </div>
+	
+		<br/>
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                   <strong>Generating Text Image Dataset</strong>	
+
+				   <hr>
+				   
+				   <p>
+						Around 80 millions text images are auto-generated to create a dataset for training CRNN-CTC Model. 
+					</p>
+					
+					<br>
+					
+					<img src="./images/textimagedataset.png" style="width:70%; height:auto; display:inline-block; margin-top:-10px;" />					
+				</div>
+            </div>
+        </div>
+	
+		<br/>
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                   <strong>Text Spotting and Recognition Result</strong>
+				</div>
+            </div>
+        </div>
+		<div>
+		<div class="row box-3">
+			<div class="col-sm-5">
+				<div id="text-recognizer" class="box-3" style="padding:0px; overflow:auto; height:500px; background-color:#ddd;">
+					<svg width="458px" height="372.952815829528px" xmlns="http://www.w3.org/2000/svg">
+
+						<image href="./images/ocr.png" height="372.952815829528px" width="458px"></image>
+
+								<polygon class="regions" id="region-0" points="0,0 453.817351598174,0 453.817351598174,372.952815829528 0,372.952815829528" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(200, 48, 122)"></polygon>
+		0                }
+
+											<polygon class="texts" id="text-1" data-placement="bottom-right" data-confidence="1.05263157894737" data-text="ပြောင်းလဲသွားပါသည်။ " points="0,349.251141552511 121.296803652968,349.251141552511 121.296803652968,365.284627092846 0,365.284627092846" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover64"></polygon>
+		1                                    <polygon class="texts" id="text-2" data-placement="bottom-right" data-confidence="2" data-text="အခြေခံကျ " points="0,329.03500761035 76.6818873668189,329.03500761035 76.6818873668189,349.251141552511 0,349.251141552511" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover65"></polygon>
+		2                                    <polygon class="texts" id="text-3" data-placement="bottom-right" data-confidence="1.25" data-text="ပြောင်းလဲထားသည့် " points="77.37899543379,329.03500761035 177.762557077626,329.03500761035 177.762557077626,349.251141552511 77.37899543379,349.251141552511" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover66"></polygon>
+		3                                    <polygon class="texts" id="text-4" data-placement="bottom-right" data-confidence="1.66666666666667" data-text="ရိုးရှင်းသော " points="178.459665144597,329.03500761035 241.896499238965,329.03500761035 241.896499238965,349.251141552511 178.459665144597,349.251141552511" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover67"></polygon>
+		4                                    <polygon class="texts" id="text-5" data-placement="bottom-right" data-confidence="0.909090909090909" data-text="လူပတ်ဝန်းကျင်အဖြစ်သို့ " points="243.290715372907,329.03500761035 373.649923896499,329.03500761035 373.649923896499,349.251141552511 243.290715372907,349.251141552511" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover68"></polygon>
+		5                                    <polygon class="texts" id="text-6" data-placement="bottom-right" data-confidence="1.25" data-text="ဂေဟစနစ်ယူနစ်များ " points="17.427701674277,144.998477929985 135.936073059361,144.998477929985 135.936073059361,165.911719939117 17.427701674277,165.911719939117" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		6                                    <polygon class="texts" id="text-7" data-placement="bottom-right" data-confidence="0.8" data-text="သဘာဝအလျောက်ဖြစ်ပေါနေသည့် " points="17.427701674277,126.176560121766 200.767123287671,126.176560121766 200.767123287671,144.998477929985 17.427701674277,144.998477929985" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover70"></polygon>
+		7                                    <polygon class="texts" id="text-8" data-placement="bottom-right" data-confidence="1.33333333333333" data-text="စနစ်များဖြစ်သော " points="202.161339421613,126.176560121766 294.179604261796,126.176560121766 294.179604261796,144.998477929985 202.161339421613,144.998477929985" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		8                                    <polygon class="texts" id="text-9" data-placement="bottom-right" data-confidence="1.25" data-text="ပြီးပြည့်စုံသည့် " points="294.876712328767,126.176560121766 373.649923896499,126.176560121766 373.649923896499,144.998477929985 294.876712328767,144.998477929985" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		9                                    <polygon class="texts" id="text-10" data-placement="bottom-right" data-confidence="2" data-text="လူသားများ၏ " points="17.427701674277,104.566210045662 92.7153729071537,104.566210045662 92.7153729071537,127.570776255708 17.427701674277,127.570776255708" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		10                                    <polygon class="texts" id="text-11" data-placement="bottom-right" data-confidence="1.42857142857143" data-text="ကြီးကြီးမားမား " points="94.1095890410959,104.566210045662 168.700152207002,104.566210045662 168.700152207002,127.570776255708 94.1095890410959,127.570776255708" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		11                                    <polygon class="texts" id="text-12" data-placement="bottom-right" data-confidence="0.833333333333333" data-text="ဝင်ရောက်စွက်ဖက်မှုမရှိဘဲ " points="170.094368340944,104.566210045662 307.424657534247,104.566210045662 307.424657534247,127.570776255708 170.094368340944,127.570776255708" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover75"></polygon>
+		12                                    <polygon class="texts" id="text-13" data-placement="bottom-right" data-confidence="20" data-text="' " points="16.0334855403349,84.3500761035008 26.4901065449011,84.3500761035008 26.4901065449011,107.354642313546 16.0334855403349,107.354642313546" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		13                                    <polygon class="texts" id="text-14" data-placement="bottom-right" data-confidence="5" data-text="လေထု " points="27.1872146118721,84.3500761035008 64.8310502283105,84.3500761035008 64.8310502283105,107.354642313546 27.1872146118721,107.354642313546" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		14                                    <polygon class="texts" id="text-15" data-placement="bottom-right" data-confidence="4" data-text="နှင့် " points="66.2252663622527,84.3500761035008 86.441400304414,84.3500761035008 86.441400304414,107.354642313546 66.2252663622527,107.354642313546" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		15                                    <polygon class="texts" id="text-16" data-placement="bottom-right" data-confidence="1.33333333333333" data-text="သဘာဝဖြစ်စဉ်များ " points="87.8356164383562,84.3500761035008 184.733637747336,84.3500761035008 184.733637747336,107.354642313546 87.8356164383562,107.354642313546" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		16                                    <polygon class="texts" id="text-17" data-placement="bottom-right" data-confidence="1.42857142857143" data-text="အားလုံးအပါအဝင် " points="186.127853881279,84.3500761035008 281.631659056317,84.3500761035008 281.631659056317,107.354642313546 186.127853881279,107.354642313546" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		17                                    <polygon class="texts" id="text-18" data-placement="bottom-right" data-confidence="0.909090909090909" data-text="ယဉ်ကျေးမှုထွန်းကားပြီး " points="282.328767123288,84.3500761035008 407.808219178082,84.3500761035008 407.808219178082,107.354642313546 282.328767123288,107.354642313546" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		18                                    <polygon class="texts" id="text-19" data-placement="bottom-right" data-confidence="1.25" data-text="သဘာဝပေါက်ပင်များ " points="17.427701674277,65.5281582952816 134.541856925419,65.5281582952816 134.541856925419,88.5327245053272 17.427701674277,88.5327245053272" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover82"></polygon>
+		19                                    <polygon class="texts" id="text-20" data-placement="bottom-right" data-confidence="1.25" data-text="အဏုဇီဝသက်ရှိများ " points="135.936073059361,65.5281582952816 240.502283105023,65.5281582952816 240.502283105023,88.5327245053272 135.936073059361,88.5327245053272" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover83"></polygon>
+		20                                    <polygon class="texts" id="text-21" data-placement="bottom-right" data-confidence="2" data-text="မြေဆီလွှား " points="241.199391171994,65.5281582952816 298.362252663622,65.5281582952816 298.362252663622,88.5327245053272 241.199391171994,88.5327245053272" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover84"></polygon>
+		21                                    <polygon class="texts" id="text-22" data-placement="bottom-right" data-confidence="0.833333333333333" data-text="ကျောက်စိုင်ကျောက်သားများ " points="299.059360730594,65.5281582952816 448.937595129376,65.5281582952816 448.937595129376,88.5327245053272 299.059360730594,88.5327245053272" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover85"></polygon>
+		22                                    <polygon class="texts" id="text-23" data-placement="bottom-right" data-confidence="20" data-text=". " points="8.36529680365297,47.4033485540335 20.2161339421613,47.4033485540335 20.2161339421613,66.9223744292237 8.36529680365297,66.9223744292237" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		23                                    <polygon class="texts" id="text-24" data-placement="bottom-right" data-confidence="2.22222222222222" data-text="၎င်းတို့၏ " points="21.6103500761035,47.4033485540335 69.7108066971081,47.4033485540335 69.7108066971081,66.9223744292237 21.6103500761035,66.9223744292237" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover87"></polygon>
+		24                                    <polygon class="texts" id="text-25" data-placement="bottom-right" data-confidence="2" data-text="သက်ဆိုင်ရာ " points="70.4079147640791,47.4033485540335 136.633181126332,47.4033485540335 136.633181126332,66.9223744292237 70.4079147640791,66.9223744292237" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover88"></polygon>
+		25                                    <polygon class="texts" id="text-26" data-placement="bottom-right" data-confidence="2.22222222222222" data-text="သဘာဝနှင့် " points="137.330289193303,47.4033485540335 197.281582952816,47.4033485540335 197.281582952816,66.9223744292237 137.330289193303,66.9223744292237" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover89"></polygon>
+		26                                    <polygon class="texts" id="text-27" data-placement="bottom-right" data-confidence="1.05263157894737" data-text="နယ်နိမိတ်များအတွင်း " points="198.675799086758,47.4033485540335 313.001522070015,47.4033485540335 313.001522070015,66.9223744292237 198.675799086758,66.9223744292237" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover90"></polygon>
+		27                                    <polygon class="texts" id="text-28" data-placement="bottom-right" data-confidence="1.42857142857143" data-text="ဖြစ်ပေါ်နေသည့် " points="313.698630136986,47.4033485540335 398.745814307458,47.4033485540335 398.745814307458,66.9223744292237 313.698630136986,66.9223744292237" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover91"></polygon>
+		28                                    <polygon class="texts" id="text-29" data-placement="bottom-right" data-confidence="0.571428571428571" data-text="အောက်ပါအတိုင်းခွဲခြမ်းကြည့်နိုင်သည် " points="0,21.6103500761035 207.041095890411,21.6103500761035 207.041095890411,40.4322678843227 0,40.4322678843227" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		29                                    <polygon class="texts" id="text-30" data-placement="bottom-right" data-confidence="0.909090909090909" data-text="သဘာဝပတ်ဝန်းကျင်ဆိုင်ရာ " points="0,1.39421613394216 147.089802130898,1.39421613394216 147.089802130898,21.6103500761035 0,21.6103500761035" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover93"></polygon>
+		30                                    <polygon class="texts" id="text-31" data-placement="bottom-right" data-confidence="2.5" data-text="အယူအဆအား " points="148.48401826484,1.39421613394216 226.560121765601,1.39421613394216 226.560121765601,21.6103500761035 148.48401826484,21.6103500761035" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover94"></polygon>
+		31                                    <polygon class="texts" id="text-32" data-placement="bottom-right" data-confidence="0.952380952380952" data-text="အစိတ်အပိုင်းများအဖြစ် " points="227.257229832572,1.39421613394216 352.039573820396,1.39421613394216 352.039573820396,21.6103500761035 227.257229832572,21.6103500761035" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover95"></polygon>
+		32                                    <polygon class="texts" id="text-33" data-placement="bottom-right" data-confidence="1.05263157894737" data-text="လုပ်ယူဖန်တီးထားသည့် " points="0,308.818873668189 124.085235920852,308.818873668189 124.085235920852,329.03500761035 0,329.03500761035" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		33                                    <polygon class="texts" id="text-34" data-placement="bottom-right" data-confidence="0.909090909090909" data-text="ပတ်ဝန်းကျင်များကြောင့် " points="124.782343987823,308.818873668189 250.958904109589,308.818873668189 250.958904109589,329.03500761035 124.782343987823,329.03500761035" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		34                                    <polygon class="texts" id="text-35" data-placement="bottom-right" data-confidence="1.33333333333333" data-text="သဘာဝပတ်ဝန်းကျင် " points="252.353120243531,308.818873668189 361.799086757991,308.818873668189 361.799086757991,329.03500761035 252.353120243531,329.03500761035" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		35                                    <polygon class="texts" id="text-36" data-placement="bottom-right" data-confidence="1.42857142857143" data-text="ရှုခင်းများသည် " points="363.193302891933,308.818873668189 443.360730593607,308.818873668189 443.360730593607,329.03500761035 363.193302891933,329.03500761035" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		36                                    <polygon class="texts" id="text-37" data-placement="bottom-right" data-confidence="0.909090909090909" data-text="စိုက်ပျိုးမြများနှင့် " points="100.383561643836,289.299847792998 194.493150684931,289.299847792998 194.493150684931,310.213089802131 100.383561643836,310.213089802131" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		37                                    <polygon class="texts" id="text-38" data-placement="bottom-right" data-confidence="1" data-text="မြို့ပြနေရာများအဖြစ် " points="195.190258751903,289.299847792998 304.636225266362,289.299847792998 304.636225266362,310.213089802131 195.190258751903,310.213089802131" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		38                                    <polygon class="texts" id="text-39" data-placement="bottom-right" data-confidence="0.833333333333333" data-text="ပြောင်းလဲခြင်းကဲ့သို့သော " points="306.030441400304,289.299847792998 436.389649923896,289.299847792998 436.389649923896,310.213089802131 306.030441400304,310.213089802131" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		39                                    <polygon class="texts" id="text-40" data-placement="bottom-right" data-confidence="1.25" data-text="ဝန်းကျင်ဖြစ်သည်။ " points="0,289.299847792998 99.6864535768645,289.299847792998 99.6864535768645,310.213089802131 0,310.213089802131" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover103"></polygon>
+		40                                    <polygon class="texts" id="text-41" data-placement="bottom-right" data-confidence="0.606060606060606" data-text="ယဘာဝပတ်ဝန်းကျင်၏ဆန့်ကျင်ဘက်အရာသည် " points="0,270.477929984779 254.444444444444,270.477929984779 254.444444444444,289.299847792998 0,289.299847792998" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover104"></polygon>
+		41                                    <polygon class="texts" id="text-42" data-placement="bottom-right" data-confidence="1.11111111111111" data-text="လုပ်ယူဖန်တီးထားသော " points="255.838660578387,270.477929984779 377.832572298326,270.477929984779 377.832572298326,289.299847792998 255.838660578387,289.299847792998" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover105"></polygon>
+		42                                    <polygon class="texts" id="text-43" data-placement="bottom-right" data-confidence="6.66666666666667" data-text="ပတ် " points="379.226788432268,270.477929984779 405.716894977169,270.477929984779 405.716894977169,289.299847792998 379.226788432268,289.299847792998" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		43                                    <polygon class="texts" id="text-44" data-placement="bottom-right" data-confidence="4" data-text="နှင့် " points="17.427701674277,244.684931506849 41.1293759512938,244.684931506849 41.1293759512938,263.506849315068 17.427701674277,263.506849315068" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		44                                    <polygon class="texts" id="text-45" data-placement="bottom-right" data-confidence="0.769230769230769" data-text="တလောကလုံးနှင့်သက်ဆိုင်သည့် " points="42.5235920852359,244.684931506849 209.132420091324,244.684931506849 209.132420091324,263.506849315068 42.5235920852359,263.506849315068" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover108"></polygon>
+		45                                    <polygon class="texts" id="text-46" data-placement="bottom-right" data-confidence="1.17647058823529" data-text="သဘာဝရင်းမြစ်များ။ " points="209.829528158295,244.684931506849 317.881278538813,244.684931506849 317.881278538813,263.506849315068 209.829528158295,263.506849315068" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		46                                    <polygon class="texts" id="text-47" data-placement="bottom-right" data-confidence="2.5" data-text="တိကျ " points="17.427701674277,223.771689497717 82.9558599695586,223.771689497717 82.9558599695586,244.684931506849 17.427701674277,244.684931506849" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		47                                    <polygon class="texts" id="text-48" data-placement="bottom-right" data-confidence="0.606060606060606" data-text="ပိုင်းခြားသတ်မှတ်ထားခြင်းမရှိသည့် " points="83.6529680365297,223.771689497717 263.506849315068,223.771689497717 263.506849315068,244.684931506849 83.6529680365297,244.684931506849" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover111"></polygon>
+		48                                    <polygon class="texts" id="text-49" data-placement="bottom-right" data-confidence="1.17647058823529" data-text="ရုပ်ပိုင်းဆိုင်ရာ " points="264.901065449011,223.771689497717 338.794520547945,223.771689497717 338.794520547945,244.684931506849 264.901065449011,244.684931506849" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		49                                    <polygon class="texts" id="text-50" data-placement="bottom-right" data-confidence="1.05263157894737" data-text="ဖြစ်ရိုးဖြစ်စဉ်များ " points="339.491628614916,223.771689497717 428.721461187215,223.771689497717 428.721461187215,244.684931506849 339.491628614916,244.684931506849" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		50                                    <polygon class="texts" id="text-51" data-placement="bottom-right" data-confidence="1" data-text="လျှပ်စစ်ဓာတ်အားနှင့် " points="24.3987823439878,204.949771689498 131.056316590563,204.949771689498 131.056316590563,223.771689497717 24.3987823439878,223.771689497717" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		51                                    <polygon class="texts" id="text-52" data-placement="bottom-right" data-confidence="0.952380952380952" data-text="သံလိုက်ဓာတ်တိုကဲ့သို့ " points="132.450532724505,204.949771689498 244.684931506849,204.949771689498 244.684931506849,223.771689497717 132.450532724505,223.771689497717" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		52                                    <polygon class="texts" id="text-53" data-placement="bottom-right" data-confidence="2.22222222222222" data-text="၎င်းတို့၏ " points="245.38203957382,204.949771689498 294.876712328767,204.949771689498 294.876712328767,223.771689497717 245.38203957382,223.771689497717" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover116"></polygon>
+		53                                    <polygon class="texts" id="text-54" data-placement="bottom-right" data-confidence="1.05263157894737" data-text="သက်ဆိုင်ရာနယ်နိမိတ် " points="295.573820395738,204.949771689498 414.779299847793,204.949771689498 414.779299847793,223.771689497717 295.573820395738,223.771689497717" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		54                                    <polygon class="texts" id="text-55" data-placement="bottom-right" data-confidence="1.11111111111111" data-text="လုပ်ဆောင်မှုများမှ " points="17.427701674277,186.127853881279 117.114155251142,186.127853881279 117.114155251142,206.34398782344 17.427701674277,206.34398782344" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover118"></polygon>
+		55                                    <polygon class="texts" id="text-56" data-placement="bottom-right" data-confidence="0.8" data-text="ကနဦးအစပြုခဲ့ခြင်းမဟုတ်သော " points="117.811263318113,186.127853881279 281.631659056317,186.127853881279 281.631659056317,206.34398782344 117.811263318113,206.34398782344" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover119"></polygon>
+		56                                    <polygon class="texts" id="text-57" data-placement="bottom-right" data-confidence="2.22222222222222" data-text="စွမ်းအင်၊ " points="282.328767123288,186.127853881279 329.732115677321,186.127853881279 329.732115677321,206.34398782344 282.328767123288,206.34398782344" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		57                                    <polygon class="texts" id="text-58" data-placement="bottom-right" data-confidence="1.53846153846154" data-text="ဓာတ်ရောင်ခြည် " points="331.126331811263,186.127853881279 418.264840182648,186.127853881279 418.264840182648,206.34398782344 331.126331811263,206.34398782344" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover121"></polygon>
+		58                                    <polygon class="texts" id="text-59" data-placement="bottom-right" data-confidence="20" data-text=" " points="10.4566210045662,167.305936073059 19.5190258751903,167.305936073059 19.5190258751903,187.522070015221 10.4566210045662,187.522070015221" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		59                                    <polygon class="texts" id="text-60" data-placement="bottom-right" data-confidence="6.66666666666667" data-text="လေ၊ " points="20.9132420091324,167.305936073059 48.7975646879756,167.305936073059 48.7975646879756,187.522070015221 20.9132420091324,187.522070015221" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		60                                    <polygon class="texts" id="text-61" data-placement="bottom-right" data-confidence="10" data-text="ရေ " points="50.1917808219178,167.305936073059 71.1050228310502,167.305936073059 71.1050228310502,187.522070015221 50.1917808219178,187.522070015221" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		61                                    <polygon class="texts" id="text-62" data-placement="bottom-right" data-confidence="1.33333333333333" data-text="ရာသီဥတုတို့သာမက " points="71.8021308980213,167.305936073059 177.762557077626,167.305936073059 177.762557077626,187.522070015221 71.8021308980213,187.522070015221" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover125"></polygon>
+		62                                    <polygon class="texts" id="text-63" data-placement="bottom-right" data-confidence="0.909090909090909" data-text="ယဉ်ကျေးမှုထွန်းကားပြီး " points="178.459665144597,167.305936073059 303.24200913242,167.305936073059 303.24200913242,187.522070015221 178.459665144597,187.522070015221" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)" data-target="webuiPopover126"></polygon>
+		63                                    <polygon class="texts" id="text-64" data-placement="bottom-right" data-confidence="2" data-text="လူသားတို့၏ " points="303.939117199391,167.305936073059 370.164383561644,167.305936073059 370.164383561644,187.522070015221 303.939117199391,187.522070015221" style="cursor:pointer; fill-opacity: 0.1;stroke-width:1; stroke: rgb(0,255,0)"></polygon>
+		64
+					</svg>
+				</div>
+			</div>
+
+
+			<div class="col-sm-7">
+				<div class="col-sm-12 box-3" style="padding:15px;">
+					<form>
+						<input type="hidden" id="layouts" value="en">
+
+						<div class="col-sm-6">
+							<input type="radio" style="margin:10px; display:inline-block;" onchange="setLayout($(this).val())" name="layouts" value="Text" checked=""><label for="Text">Text Layout</label>
+						</div>
+						<div class="col-sm-6">
+							<input type="radio" style="margin:10px; display:inline-block;" onchange="setLayout($(this).val())" name="layouts" value="Table"><label for="Table">Table Layout</label>
+						</div>
+					</form>
+
+				</div>
+
+
+				<div class="clearfix"></div>
+
+				<br>
+
+				<div id="table-layout" class="box-3" style="padding:10px; overflow:auto; height:400px; display:none;">
+
+						<table style="width:100%;">
+							<tbody><tr>
+									<td style="vertical-align: top;">
+
+											<div>သဘာဝပတ်ဝန်းကျင်ဆိုင်ရာ အယူအဆအား အစိတ်အပိုင်းများအဖြစ် </div>
+											<div>အောက်ပါအတိုင်းခွဲခြမ်းကြည့်နိုင်သည် </div>
+											<div>. ၎င်းတို့၏ သက်ဆိုင်ရာ သဘာဝနှင့် နယ်နိမိတ်များအတွင်း ဖြစ်ပေါ်နေသည့် </div>
+											<div>သဘာဝပေါက်ပင်များ အဏုဇီဝသက်ရှိများ မြေဆီလွှား ကျောက်စိုင်ကျောက်သားများ </div>
+											<div>' လေထု နှင့် သဘာဝဖြစ်စဉ်များ အားလုံးအပါအဝင် ယဉ်ကျေးမှုထွန်းကားပြီး </div>
+											<div>လူသားများ၏ ကြီးကြီးမားမား ဝင်ရောက်စွက်ဖက်မှုမရှိဘဲ </div>
+											<div>သဘာဝအလျောက်ဖြစ်ပေါနေသည့် စနစ်များဖြစ်သော ပြီးပြည့်စုံသည့် </div>
+											<div>ဂေဟစနစ်ယူနစ်များ </div>
+											<div> လေ၊ ရေ ရာသီဥတုတို့သာမက ယဉ်ကျေးမှုထွန်းကားပြီး လူသားတို့၏ </div>
+											<div>လုပ်ဆောင်မှုများမှ ကနဦးအစပြုခဲ့ခြင်းမဟုတ်သော စွမ်းအင်၊ ဓာတ်ရောင်ခြည် </div>
+											<div>လျှပ်စစ်ဓာတ်အားနှင့် သံလိုက်ဓာတ်တိုကဲ့သို့ ၎င်းတို့၏ သက်ဆိုင်ရာနယ်နိမိတ် </div>
+											<div>တိကျ ပိုင်းခြားသတ်မှတ်ထားခြင်းမရှိသည့် ရုပ်ပိုင်းဆိုင်ရာ ဖြစ်ရိုးဖြစ်စဉ်များ </div>
+											<div>နှင့် တလောကလုံးနှင့်သက်ဆိုင်သည့် သဘာဝရင်းမြစ်များ။ </div>
+											<div>ယဘာဝပတ်ဝန်းကျင်၏ဆန့်ကျင်ဘက်အရာသည် လုပ်ယူဖန်တီးထားသော ပတ် </div>
+											<div>ဝန်းကျင်ဖြစ်သည်။ စိုက်ပျိုးမြများနှင့် မြို့ပြနေရာများအဖြစ် ပြောင်းလဲခြင်းကဲ့သို့သော </div>
+											<div>လုပ်ယူဖန်တီးထားသည့် ပတ်ဝန်းကျင်များကြောင့် သဘာဝပတ်ဝန်းကျင် ရှုခင်းများသည် </div>
+											<div>အခြေခံကျ ပြောင်းလဲထားသည့် ရိုးရှင်းသော လူပတ်ဝန်းကျင်အဖြစ်သို့ </div>
+											<div>ပြောင်းလဲသွားပါသည်။ </div>
+
+									</td>
+							</tr>
+						</tbody></table>
+				</div>
+
+
+				<div id="text-layout" class="box-3" style="padding:10px; overflow:auto; height:400px;">
+
+						<div>
+
+								<div>
+										<div>သဘာဝပတ်ဝန်းကျင်ဆိုင်ရာ အယူအဆအား အစိတ်အပိုင်းများအဖြစ် </div>
+										<div class="clearfix"></div>
+										<div>အောက်ပါအတိုင်းခွဲခြမ်းကြည့်နိုင်သည် </div>
+										<div class="clearfix"></div>
+										<div>. ၎င်းတို့၏ သက်ဆိုင်ရာ သဘာဝနှင့် နယ်နိမိတ်များအတွင်း ဖြစ်ပေါ်နေသည့် </div>
+										<div class="clearfix"></div>
+										<div>သဘာဝပေါက်ပင်များ အဏုဇီဝသက်ရှိများ မြေဆီလွှား ကျောက်စိုင်ကျောက်သားများ </div>
+										<div class="clearfix"></div>
+										<div>' လေထု နှင့် သဘာဝဖြစ်စဉ်များ အားလုံးအပါအဝင် ယဉ်ကျေးမှုထွန်းကားပြီး </div>
+										<div class="clearfix"></div>
+										<div>လူသားများ၏ ကြီးကြီးမားမား ဝင်ရောက်စွက်ဖက်မှုမရှိဘဲ </div>
+										<div class="clearfix"></div>
+										<div>သဘာဝအလျောက်ဖြစ်ပေါနေသည့် စနစ်များဖြစ်သော ပြီးပြည့်စုံသည့် </div>
+										<div class="clearfix"></div>
+										<div>ဂေဟစနစ်ယူနစ်များ </div>
+										<div class="clearfix"></div>
+										<div> လေ၊ ရေ ရာသီဥတုတို့သာမက ယဉ်ကျေးမှုထွန်းကားပြီး လူသားတို့၏ </div>
+										<div class="clearfix"></div>
+										<div>လုပ်ဆောင်မှုများမှ ကနဦးအစပြုခဲ့ခြင်းမဟုတ်သော စွမ်းအင်၊ ဓာတ်ရောင်ခြည် </div>
+										<div class="clearfix"></div>
+										<div>လျှပ်စစ်ဓာတ်အားနှင့် သံလိုက်ဓာတ်တိုကဲ့သို့ ၎င်းတို့၏ သက်ဆိုင်ရာနယ်နိမိတ် </div>
+										<div class="clearfix"></div>
+										<div>တိကျ ပိုင်းခြားသတ်မှတ်ထားခြင်းမရှိသည့် ရုပ်ပိုင်းဆိုင်ရာ ဖြစ်ရိုးဖြစ်စဉ်များ </div>
+										<div class="clearfix"></div>
+										<div>နှင့် တလောကလုံးနှင့်သက်ဆိုင်သည့် သဘာဝရင်းမြစ်များ။ </div>
+										<div class="clearfix"></div>
+										<div>ယဘာဝပတ်ဝန်းကျင်၏ဆန့်ကျင်ဘက်အရာသည် လုပ်ယူဖန်တီးထားသော ပတ် </div>
+										<div class="clearfix"></div>
+										<div>ဝန်းကျင်ဖြစ်သည်။ စိုက်ပျိုးမြများနှင့် မြို့ပြနေရာများအဖြစ် ပြောင်းလဲခြင်းကဲ့သို့သော </div>
+										<div class="clearfix"></div>
+										<div>လုပ်ယူဖန်တီးထားသည့် ပတ်ဝန်းကျင်များကြောင့် သဘာဝပတ်ဝန်းကျင် ရှုခင်းများသည် </div>
+										<div class="clearfix"></div>
+										<div>အခြေခံကျ ပြောင်းလဲထားသည့် ရိုးရှင်းသော လူပတ်ဝန်းကျင်အဖြစ်သို့ </div>
+										<div class="clearfix"></div>
+										<div>ပြောင်းလဲသွားပါသည်။ </div>
+										<div class="clearfix"></div>
+								</div>
+								<div class="clearfix"></div>
+								<br>
+						</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+
+			$(document).ready(function () {
+
+				WebuiPopovers.hideAll();
+
+				var texts = $(".texts");
+
+				window.setLayout = function (value) {
+
+					if (value == "Text") {
+						$("#text-layout").show();
+						$("#table-layout").hide();
+					}
+					else {
+						$("#text-layout").hide();
+						$("#table-layout").show();
+					}
+
+				}
+
+				$.each(texts, function (i, text) {
+
+					$(text).webuiPopover({
+						width: 'auto',
+						height: 'auto',
+						content: "<a class='text-link' href='#annotation-" + i + "'><span>" + $(text).data("text") + "</span> - <span>" + $(text).data("confidence") + "% </span></a>",
+						padding: true,
+						trigger: 'click',
+						animation: 'pop',
+						type: 'html',
+						arrow: true,
+						closeable: false,
+						backdrop: false,
+						dismissible: true,
+						onShow: function (element) {
+
+
+						},
+						onHide: function () {
+						}
+					});
+
+				});
+
+				$(texts).on('click', function (event) {
+
+					var element = $(this);
+
+					WebuiPopovers.show($(element));
+
+				});
+
+				$(texts).on('touchend', function (event) {
+
+					var element = $(this);
+
+					WebuiPopovers.show($(element));
+
+				});
+
+				window.onscroll = function () {
+					WebuiPopovers.hideAll();
+				}
+
+				$("#text-recognizer").scroll(function () {
+					WebuiPopovers.hideAll();
+				});
+
+			});
+
+		</script>
+
+		</div>
+
+		<br/>
+
+        <div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                    <svg height="32" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                    <a href="https://github.com/2kha" target="_blank" style="margin-left:50px; margin-top:-35px; display:block;">Please find me more on Github...</a>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+    </div>
+</div>
+      
+
+        <div class="modal fade" id="suggestion-popup" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-member">
+                <div class="modal-content">
+                    <div class="modal-header" style="border:none;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4>Suggestion</h4>
+                    </div>
+                    <div class="modal-body" style="padding:0px;">
+
+                        <div id="suggestion-container" style="height:300px; overflow-y:auto;">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+  <footer>
+            <p>&copy; <span id="c-date"></span> - Than Lwin Aung</p>
+        </footer>
+
+    </div>
+
+	<script>
+	
+		$(document).ready(function(){
+		
+		
+			var date = new Date();
+			var year = date.getFullYear();
+			
+			$("#c-date").html(year);
+			
+			  $("#syllable-bx-mm").unbind().bind("click", function () {
+
+			  if ($("#syllable-bx-mm").is(":checked")) {
+				  $("#text-bx-mm").prop('checked', false);
+
+				  $(".syllables-mm").show();
+				  $(".labels-mm").hide();
+			  }
+			  else {
+
+				  $("#text-bx-mm").prop('checked', false);
+
+				  $(".syllables-mm").hide();
+				  $(".labels-mm").hide();
+			  }
+		  });
+
+		  $("#text-bx-mm").unbind().bind("click", function () {
+			  if ($("#text-bx-mm").is(":checked")) {
+				  $("#syllable-bx-mm").prop('checked', false);
+
+				  $(".syllables-mm").hide();
+				  $(".labels-mm").show();
+			  }
+			  else {
+				  $("#syllable-bx-mm").prop('checked', false);
+
+
+				  $(".syllables-mm").hide();
+				  $(".labels-mm").hide();
+			  }
+		  });
+		  
+		   $("#syllable-bx-en").unbind().bind("click", function () {
+
+			  if ($("#syllable-bx-en").is(":checked")) {
+				  $("#text-bx-en").prop('checked', false);
+
+				  $(".syllables-en").show();
+				  $(".labels-en").hide();
+			  }
+			  else {
+
+				  $("#text-bx-en").prop('checked', false);
+
+				  $(".syllables-en").hide();
+				  $(".labels-en").hide();
+			  }
+		  });
+
+		  $("#text-bx-en").unbind().bind("click", function () {
+			  if ($("#text-bx-en").is(":checked")) {
+				  $("#syllable-bx-en").prop('checked', false);
+
+				  $(".syllables-en").hide();
+				  $(".labels-en").show();
+			  }
+			  else {
+				  $("#syllable-bx-en").prop('checked', false);
+
+
+				  $(".syllables-en").hide();
+				  $(".labels-en").hide();
+			  }
+		  });
+		});
+	</script>
+</body>
+</html>
