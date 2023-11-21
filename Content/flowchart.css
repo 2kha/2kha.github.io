@@ -1,0 +1,296 @@
+.demo {
+    /* for IE10+ touch devices */
+    touch-action:none;
+}
+
+.flowchart-demo .IfBlock {
+ 
+	z-index:2;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    position:absolute;
+    cursor:pointer;
+    text-align:center;
+    color:#333;
+	
+	width:150px;
+    height:150px;
+    line-height: 150px;
+    background-image:url(./Images/ifblock.png);
+}
+
+.flowchart-demo .EndIfBlock {
+ 
+	z-index:2;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    position:absolute;
+    cursor:pointer;
+    text-align:center;
+    color:#333;	
+	width:210px;
+    height:70px;
+    left:380px;
+    top:505px;
+    line-height: 70px;
+    background-image:url(./Images/endifblock.png);
+}
+
+.flowchart-demo .WhileBlock {
+ 
+	z-index:2;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    position:absolute;
+    cursor:pointer;
+    text-align:center;
+    color:#333;
+	
+	width:150px;
+    height:150px;
+    line-height: 150px;
+    background-image:url(./Images/whileblock.png);
+}
+
+.flowchart-demo .EndWhileBlock {
+ 
+	z-index:2;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    position:absolute;
+    cursor:pointer;
+    text-align:center;
+    color:#333;	
+	width:210px;
+    height:70px;
+    left:380px;
+    top:505px;
+    line-height: 70px;
+    background-image:url(./Images/endwhileblock.png);
+}
+
+
+.flowchart-demo .RepeatBlock {
+ 
+z-index:2;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    position:absolute;
+    cursor:pointer;
+    text-align:center;
+    color:#333;
+	
+	width:150px;
+    height:150px;
+    line-height: 150px;
+    background-image:url(./Images/repeatblock.png);
+}
+
+.flowchart-demo .UntilBlock {
+ 
+	z-index:2;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    position:absolute;
+    cursor:pointer;
+    text-align:center;
+    color:#333;	
+	width:210px;
+    height:70px;
+    left:380px;
+    top:505px;
+    line-height: 70px;
+    background-image:url(./Images/untilblock.png);
+}
+
+
+.flowchart-demo .ProcedureBlock {
+ 
+	z-index:2;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    position:absolute;
+    cursor:pointer;
+    text-align:center;
+    color:#333;	
+	width:210px;
+    height:70px;
+    left:380px;
+    top:505px;
+    line-height: 70px;
+    background-image:url(./Images/procedureblock.png);
+}
+
+.flowchart-demo .EndProcedureBlock {
+ 
+	z-index:2;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    position:absolute;
+    cursor:pointer;
+    text-align:center;
+    color:#333;	
+	width:210px;
+    height:70px;
+    left:380px;
+    top:505px;
+    line-height: 70px;
+    background-image:url(./Images/endprocedureblock.png);
+}
+
+.flowchart-demo .FunctionBlock {
+ 
+	z-index:2;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    position:absolute;
+    cursor:pointer;
+    text-align:center;
+    color:#333;	
+	width:210px;
+    height:70px;
+    left:380px;
+    top:505px;
+    line-height: 70px;
+    background-image:url(./Images/functionblock.png);
+}
+
+.flowchart-demo .EndFunctionBlock {
+ 
+	z-index:2;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    position:absolute;
+    cursor:pointer;
+    text-align:center;
+    color:#333;	
+	width:210px;
+    height:70px;
+    left:380px;
+    top:505px;
+    line-height: 70px;
+    background-image:url(./Images/endfunctionblock.png);
+}
+
+
+.flowchart-demo .ProgramBlock {
+ 
+	z-index:2;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    position:absolute;
+    cursor:pointer;
+    text-align:center;
+    color:#333;	
+	width:100px;
+    height:100px;
+    left:100px;
+    top:60px;
+    line-height: 100px;
+    background-image:url(./Images/programblock.png);
+}
+
+.flowchart-demo .EndProgramBlock {
+ 
+	z-index:2;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    position:absolute;
+    cursor:pointer;
+    text-align:center;
+    color:#333;	
+	width:210px;
+    height:70px;
+    left:380px;
+    top:505px;
+    line-height: 70px;
+    background-image:url(./Images/endprogramblock.png);
+}
+
+.flowchart-demo .CodeBlock {
+ 
+	z-index:2;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    position:absolute;
+    cursor:pointer;
+    text-align:center;
+    color:#333;	
+	width:210px;
+    height:70px;
+    left:380px;
+    top:505px;
+    line-height: 70px;
+    background-image:url(./Images/codeblock.png);
+}
+
+.flowchart-demo .window:hover {  
+}
+
+.flowchart-demo .active {
+    border: 1px dotted green;
+}
+
+.flowchart-demo .hover {
+    border: 1px dotted red;
+}
+
+#flowchartWindow1 {
+    top: 34em;
+    left: 5em;
+}
+
+#flowchartWindow2 {
+    top: 7em;
+    left: 36em;
+}
+
+#flowchartWindow3 {
+    top: 27em;
+    left: 48em;
+}
+
+#flowchartWindow4 {
+    top: 23em;
+    left: 22em;
+}
+
+.flowchart-demo ._jsPlumb_connector {
+    z-index: 4;
+}
+
+.flowchart-demo ._jsPlumb_endpoint, .endpointTargetLabel, .endpointSourceLabel {
+    z-index: 21;
+    cursor: pointer;
+}
+
+.flowchart-demo .aLabel {
+    background-color: white;
+    padding: 0.4em;
+    font: 12px sans-serif;
+    color: #444;
+    z-index: 21;
+    border: 1px dotted gray;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    cursor: pointer;
+}
+
+.flowchart-demo .aLabel._jsPlumb_hover {
+    background-color: #5C96BC;
+    color: white;
+    border: 1px solid white;
+}
+
+.window._jsPlumb_connected {
+   /*  border: 2px solid green; */
+}
+
+.jsplumb-drag {
+   /* border: 4px solid pink !important;
+    width: 100%;*/
+}
+
+path, ._jsPlumb_endpoint {
+    cursor: pointer;
+}
