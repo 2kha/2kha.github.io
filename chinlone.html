@@ -91,7 +91,7 @@
 		<div class="row box-3">
             <div class="col-md-12">
                 <div>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/AWf0zuuTCEk?si=J38itDrbcG0qcXfF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<iframe width="560" height="500" src="https://www.youtube.com/embed/AWf0zuuTCEk?si=J38itDrbcG0qcXfF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 					 
 				</div>
@@ -155,71 +155,7 @@
 			
 			$("#c-date").html(year);
 			
-			  $("#syllable-bx-mm").unbind().bind("click", function () {
-
-			  if ($("#syllable-bx-mm").is(":checked")) {
-				  $("#text-bx-mm").prop('checked', false);
-
-				  $(".syllables-mm").show();
-				  $(".labels-mm").hide();
-			  }
-			  else {
-
-				  $("#text-bx-mm").prop('checked', false);
-
-				  $(".syllables-mm").hide();
-				  $(".labels-mm").hide();
-			  }
-		  });
-
-		  $("#text-bx-mm").unbind().bind("click", function () {
-			  if ($("#text-bx-mm").is(":checked")) {
-				  $("#syllable-bx-mm").prop('checked', false);
-
-				  $(".syllables-mm").hide();
-				  $(".labels-mm").show();
-			  }
-			  else {
-				  $("#syllable-bx-mm").prop('checked', false);
-
-
-				  $(".syllables-mm").hide();
-				  $(".labels-mm").hide();
-			  }
-		  });
-		  
-		   $("#syllable-bx-en").unbind().bind("click", function () {
-
-			  if ($("#syllable-bx-en").is(":checked")) {
-				  $("#text-bx-en").prop('checked', false);
-
-				  $(".syllables-en").show();
-				  $(".labels-en").hide();
-			  }
-			  else {
-
-				  $("#text-bx-en").prop('checked', false);
-
-				  $(".syllables-en").hide();
-				  $(".labels-en").hide();
-			  }
-		  });
-
-		  $("#text-bx-en").unbind().bind("click", function () {
-			  if ($("#text-bx-en").is(":checked")) {
-				  $("#syllable-bx-en").prop('checked', false);
-
-				  $(".syllables-en").hide();
-				  $(".labels-en").show();
-			  }
-			  else {
-				  $("#syllable-bx-en").prop('checked', false);
-
-
-				  $(".syllables-en").hide();
-				  $(".labels-en").hide();
-			  }
-		  });
+			
 		});
 	</script>
 </body>
