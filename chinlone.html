@@ -102,6 +102,147 @@
         </div>
 		
 		<br />	
+
+
+	    <div class="row">
+			<div class="col-md-12">
+				<div class="box-3" style="overflow-y:auto;">
+<pre  style="margin: 0; line-height: 125%; border:none; background:white;">
+<span style="color: #0000ff">using</span> System;
+<span style="color: #0000ff">using</span> System.Collections.Generic;
+<span style="color: #0000ff">using</span> System.Linq;
+<span style="color: #0000ff">using</span> System.Text;
+<span style="color: #0000ff">using</span> Microsoft.Xna.Framework;
+<span style="color: #0000ff">using</span> Microsoft.Xna.Framework.Graphics;
+<span style="color: #0000ff">using</span> Microsoft.Xna.Framework.Input;
+
+
+<span style="color: #0000ff">namespace</span> GameEngine
+{
+
+   <span style="color: #008000"> /// <summary></span>
+    <span style="color: #008000">/// There will two major forces acting on the physical objects.</span> 
+    <span style="color: #008000">/// The first one is the Gravity. W = m * g;</span>
+    <span style="color: #008000">/// The second one is the Thrust exerted by Character. F = m * a;</span>
+    <span style="color: #008000">/// When there is no collision between Character and Physical Objects, there will be only one force, Gravity.</span>
+    <span style="color: #008000">/// Also, Gravity will be acting on all objects all the time.</span>
+    <span style="color: #008000">/// </summary></span>
+    <span style="color: #0000ff">public static class</span> PhysicsManager
+    {
+        <span style="color: #008000">#region "Constants"
+
+            <span style="color: #0000ff">public const float</span> MinimumKE = 0.0001f;
+
+            <span style="color: #0000ff">public static</span> Vector3 Gravity = new Vector3(0, -0.003f, 0);            
+            <span style="color: #0000ff">public static</span> Vector3 Thrust = new Vector3(0.0f, 0.06f, 0.0f);
+            
+            <span style="color: #0000ff">public static float</span> DampingRatio = 0.02f;
+            <span style="color: #0000ff">public static float</span> ForcePower = 0.03f;
+
+            <span style="color: #0000ff">public static float</span> TimeStamp = 100.0f;
+
+        <span style="color: #008000">#endregion</span>
+
+
+        <span style="color: #008000">#region "Methods"</span>
+
+            <span style="color: #0000ff">public static</span> Derivitive Differentiate(State s, <span style="color: #0000ff">float</span> t, Vector3 F, Vector3 T)
+            {
+                Derivitive output = <span style="color: #0000ff">new</span> Derivitive();
+
+                output.Velocity = s.Velocity;
+                output.Spin = s.Spin;
+                Forces(s, t, <span style="color: #0000ff">out</span> output.Force, <span style="color: #0000ff">out</span> output.Torque, F, T);
+
+                <span style="color: #0000ff">return</span> output;
+            }
+
+            <span style="color: #0000ff">public static</span> Derivitive Differentiate(State s, <span style="color: #0000ff">float</span> t, <span style="color: #0000ff">float</span> dt, Derivitive ds , Vector3 F, Vector3 T)
+            {
+                s.Position += ds.Velocity * dt;
+                s.Momemtum += ds.Force * dt;
+                s.Orientation += ds.Spin * dt;
+                s.AngularMomemtum += ds.Torque * dt;
+                s.ReCalculate();
+
+                Derivitive output = <span style="color: #0000ff">new</span> Derivitive();
+
+                output.Velocity = s.Velocity;
+                output.Spin = s.Spin;
+                Forces(s, t + dt, <span style="color: #0000ff">out</span> output.Force, <span style="color: #0000ff">out</span> output.Torque,F, T);
+
+                <span style="color: #0000ff">return</span> output;
+            }
+
+            <span style="color: #0000ff">public static</span> State Integrate(State s, <span style="color: #0000ff">float</span> t, <span style="color: #0000ff">float</span> dt, Vector3 F, Vector3 T)
+            {              
+                Derivitive a = Differentiate(s, t,F,T);
+                Derivitive b = Differentiate(s, t, 0.5f * dt, a,F, T);
+                Derivitive c = Differentiate(s, t, 0.5f * dt, b,F, T);
+                Derivitive d = Differentiate(s, t, dt, c,F,T);
+
+                s.Position += 1.0f/6.0f * dt * (a.Velocity +  2.0f * (b.Velocity + c.Velocity)  + d.Velocity);
+                s.Momemtum += 1.0f/6.0f * dt * (a.Force + 2.0f * (b.Force + c.Force ) + d.Force);
+                s.Orientation +=  Quaternion.Multiply((a.Spin +  Quaternion.Multiply((b.Spin + c.Spin),2.0f) + d.Spin),1.0f / 6.0f * dt);
+                s.AngularMomemtum += 1.0f / 6.0f * dt * (a.Torque + 2.0f * (b.Torque + c.Torque) + d.Torque);
+
+                <span style="color: #0000ff">return</span> s;
+            }
+
+            <span style="color: #0000ff">public static void</span> Forces(State s, <span style="color: #0000ff">float</span> t, <span style="color: #0000ff">out</span> Vector3 F1, out Vector3 T1, Vector3 F2, Vector3 T2)
+            {
+                F1 = Gravity + F2;
+
+                T1 = DampingRatio * T2;
+            }
+            
+            <span style="color: #008000">//Cuboid Inertial Tensor</span>
+            <span style="color: #0000ff">public static Matrix</span> CuboidTensor(<span style="color: #0000ff">float</span> mass, <span style="color: #0000ff">float</span> l, <span style="color: #0000ff">float</span> w, <span style="color: #0000ff">float</span> h)
+            {
+                <span style="color: #0000ff">float</span> x = mass * (l*l + h*h) / 12.0f;
+                <span style="color: #0000ff">float</span> y = mass * (l*l + w*w) / 12.0f;
+                <span style="color: #0000ff">float</span> z = mass * (w*w + h*h) / 12.0f;
+
+                Matrix m = <span style="color: #0000ff">new</span> Matrix
+                (
+                   x, 0, 0, 0,
+                   0, y, 0, 0,
+                   0, 0, z, 0,
+                   0, 0, 0, 0   
+
+                );
+
+                <span style="color: #0000ff">return</span> m;
+            }
+
+            <span style="color: #008000">//Hollow Sphereical Inertial Tensor</span>
+            <span style="color: #0000ff">public static</span> Matrix SphericalTensor(<span style="color: #0000ff">float</span> mass, <span style="color: #0000ff">float</span> r)
+            {
+                <span style="color: #0000ff">float</span> x = 2.0f / 3.0f * mass * r * r;
+
+                Matrix m = <span style="color: #0000ff">new</span> Matrix
+                (
+                   x, 0, 0, 0,
+                   0, x, 0, 0,
+                   0, 0, x, 0,
+                   0, 0, 0, 0
+
+                );
+
+                <span style="color: #0000ff">return</span> m;
+            }
+
+        <span style="color: #008000">#endregion</span>
+  
+    }  
+}
+
+</pre>
+				</div>
+			</div>
+		</div>
+		
+		 <br />
 		<br />
 		<br />
 		 
