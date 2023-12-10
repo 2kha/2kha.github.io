@@ -1,0 +1,315 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Than Lwin Aung</title>
+
+	<link rel="stylesheet" href="./Content/font-awesome.min.css" />
+    <link rel="stylesheet" href="./Content/custom.css" />
+    <link rel="stylesheet" href="./Content/material-icons.css" type='text/css' media='all' />
+    <link href="./Content/style.css" rel="stylesheet" />
+    <link href="./Content/chosen.css" rel="stylesheet" />
+    <link href="./Content/railroad-diagrams.css" rel="stylesheet" />
+    <link href="./Content/jquery.webui-popover.css" rel="stylesheet" />
+
+
+
+    <script type='text/javascript' src="./Scripts/modernizr-2.6.2.js"></script>
+    <script type='text/javascript' src="./Scripts/jquery-1.10.2.js"></script>
+    <script type='text/javascript' src="./Scripts/bootstrap.js"></script>
+    <script type='text/javascript' src="./Scripts/railroad-diagrams.js"></script>
+    <script type='text/javascript' src="./Scripts/jquery.change.type.js"></script>
+    <script type='text/javascript' src="./Scripts/underscore.js"></script>
+    <script src="./Scripts/jquery.webui-popover.js"></script>
+    <script src="./Scripts/chosen.jquery.js"></script>
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="./Scripts/jqForwardK.js"></script>
+
+
+</head>
+<body>
+
+    <header class="noo-header" id="noo-header">
+        <div class="navbar-wrapper">
+            <div class="navbar navbar-default fixed-top shrinkable">
+                <div class="container-boxed max">
+                    <div class="navbar-header">
+                        <h1 class="sr-only">Research Areas</h1>
+
+                        
+                        <a class="navbar-toggle main-toggle collapsed" style="height:auto; line-height:50px;" title="Main Menu" data-toggle="collapse" data-target=".noo-navbar-collapse">
+                            <span class="sr-only">Navigation</span>
+                            <i style="font-size:20px;" class="fa fa-bars"></i>
+                        </a>
+                    </div>
+
+
+                    <nav class="collapse navbar-collapse noo-navbar-collapse">
+                        <ul class="navbar-nav sf-menu">
+                            <li class="current-menu-item align-left">
+                                <a href="./index.html">Home</a>
+                            </li>
+
+                            <li class="align-left">
+                                <a href="./about.html">About Me</a>
+                            </li>
+
+
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div  id="main-body" class="container body-content">
+       
+        <div class="container-wrap">
+    <div class="main-content offset" style="padding-top:20px !important;">
+
+       
+        <br />
+        <br />
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+			<h3>Forward and Inverse Kinematics</h3>
+			<hr>
+			
+			<p>
+				In Classical Mechanics, Dynamics invloves motions of bodies with respect to Forces, while Kinematics involves motions of bodies without consideration of Forces. Forward and Inverse Kinematics involves the motion of limbs (links) by rotation of joints (connectors). In fact, it is the transformatin of Joint Space to Task Space. What is really interesting about Forward and Inverse Kinematics is it is where Art (Animation) and Engineering (Robotics) intersects.
+			</p>
+
+			<br>
+					
+					<img src="https://raw.githubusercontent.com/2kha/2kha.github.io/master/Images/fbkinematics.png" style="width:80%; height:auto; display:inline-block; margin-top:-10px;" />	
+		</div>
+            </div>
+        </div>
+	<br />
+	    <div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                    
+					<h3>Forward Kinematics</h3>
+					<hr>
+					
+					<p>
+						Forward Kinematics only considers the transformatin from Joint Space to Task Space. However, there could be a series of N Limbs (Links) connected by M Joints (Connectors). Therefore, the final position of the end effector is dependent on the individual of rotatons of different joints. Then, the calculation of final position invovles:
+					</p>
+
+				
+					<br>
+					
+					<img src="https://raw.githubusercontent.com/2kha/2kha.github.io/master/Images/jointspace.png" style="width:80%; height:auto; display:inline-block; margin-top:-10px;" />					
+				</div>
+            </div>
+        </div>
+		
+		<br />	
+
+
+	    <div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                    
+					<h3>Skeletal Animation</h3>
+					<hr>
+					
+					<p>
+						Skeletal Animation is actually to animate an 3D Model by rotating its joints. However, just rotation of joints is not enough as the vertices of 3D Model can be deformed, and therefore, there are some solutions with <a href="https://ocw.mit.edu/courses/6-837-computer-graphics-fall-2012/9ab6e7460a5b93d6f97b08f95de23ebc_MIT6_837F12_Lec06.pdf" target="_blank" style="color:blue;">skinning<a/> the meshes of 3D Model to its joints. For more information, please visit <a href="https://learnopengl.com/Guest-Articles/2020/Skeletal-Animation" target="_blank" style="color:blue;">OpenGL</a>.
+					</p>
+
+				
+					<br>
+					 <div class="col-md-6">
+                    
+					
+					<img src="https://raw.githubusercontent.com/2kha/2kha.github.io/master/Images/frame1.png" style="width:100%; height:auto; display:inline-block; margin-top:-10px;" />	
+				
+					</div>
+					<div class="col-md-6">
+					<img src="https://raw.githubusercontent.com/2kha/2kha.github.io/master/Images/frame2.png" style="width:100%; height:auto; display:inline-block; margin-top:-10px;" />					
+				</div>
+					</div>
+            </div>
+        </div>
+		
+		<br />	
+	   
+
+		 <div class="row box-3">
+            <div class="col-md-12">
+                <h3>Chinlone Pose: မဟာဒူး</h3>
+					<hr>
+					
+					<img src="https://raw.githubusercontent.com/2kha/2kha.github.io/master/Images/kneel.png" style="width:80%; height:auto; display:inline-block; margin-top:-10px;" />					
+				</div>
+            </div>
+        </div>
+		
+		<br />	
+		
+		<div class="row">
+
+                            <div class="col-sm-2">
+
+                               
+
+                                <div id="hyper-parameters" class="box-3" style="padding:0px; padding-top:40px; overflow:auto; height:505px;">
+
+                                    <div class="row" style="margin-left:0px; margin-right:0px; margin-top:20px;">
+                                        
+                                            <div class="col-sm-3">
+                                                <label class="col-sm-12 control-label">A</label>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="range" class="rotate form-range" min="180" max="360" step="0.001" style="margin-top:7px;" id="joint-1">
+                                            </div>
+                                        
+                                    </div>
+
+                                    <div class="row" style="margin-left:0px; margin-right:0px; margin-top:20px;">
+                                       
+                                            <div class="col-sm-3">
+                                                <label class="col-sm-12 control-label">B</label>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="range" class="rotate form-range" min="0" max="360" step="0.001" style="margin-top:7px;" id="joint-2">
+                                            </div>
+                                        
+                                    </div>
+
+                                    <div class="row" style="margin-left:0px; margin-right:0px; margin-top:20px;">
+                                       
+                                            <div class="col-sm-3">
+                                                <label class="col-sm-12 control-label">C</label>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="range" class="rotate form-range" min="0" max="360" step="0.001" style="margin-top:7px;" id="joint-3">
+                                            </div>
+                                       
+                                    </div>
+									
+									 <div class="row" style="margin-left:0px; margin-right:0px; margin-top:20px;">
+                                       
+                                            <div class="col-sm-3">
+                                                <label class="col-sm-12 control-label">D</label>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="range" class="rotate form-range" min="0" max="360" step="0.001" style="margin-top:7px;" id="joint-4">
+                                            </div>
+                                       
+                                    </div>
+
+                                   
+                                </div>
+
+
+
+                            </div>
+
+
+                            <div id="forward-container" class="col-sm-10">
+
+                                
+                                <div class="row" style="margin-left:0px; margin-right:0px; margin-top:0px;">
+
+                                    <div id="result" class="box-3 grid-background" style="padding:0px; overflow:auto; height:505px;">
+										<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+
+											 
+										  <g id="limb">
+												<g id="lq1"  transform="rotate(280 380.89999 81.19999)">
+													<ellipse ry="20" rx="19.5" id="q1" cy="81.19999" cx="380.89999" stroke="#000" fill="#AF84A3"/>
+													<rect id="l1" height="6" width="91.00001" y="79.2" x="287.4" stroke="#000" fill="#B8874D"/>
+												
+													<g id="lq2" transform="rotate(280 286.89999 81.19999)">
+														<ellipse ry="20" rx="19.5" id="q2" cy="81.19999" cx="286.89999" stroke="#000" fill="#AF84A3"/>
+														<rect id="l2" height="6" width="91.00001" y="79.2" x="193.4" stroke="#000" fill="#B8874D"/>
+												
+														<g id="lq3" transform="rotate(80 192.89999 81.19999)">
+															<ellipse ry="20" rx="19.5" id="q3" cy="81.19999" cx="192.89999" stroke="#000" fill="#AF84A3"/>
+															<rect id="l3" height="6" width="91.00001" y="79.2" x="99.4" stroke="#000" fill="#B8874D"/>
+												
+															<g id="lq4" transform="rotate(300 94.89999 81.19999)">
+																<ellipse ry="20" rx="19.5" id="q4" cy="81.199999" cx="94.89999" stroke="#000" fill="#AF84A3"/>
+																<rect id="l4" height="6" width="91.00001" y="79.2" x="0.4" stroke="#000" fill="#B8874D"/>
+															</g>
+														</g>
+													</g>
+												</g>
+											 </g>
+										</svg>
+								   </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+	
+		
+
+		<br/>
+
+        <div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                    <svg height="32" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                    <a href="https://github.com/2kha" target="_blank" style="margin-left:50px; margin-top:-35px; display:block;">Please find me more on Github...</a>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+    </div>
+</div>
+      
+
+        <div class="modal fade" id="suggestion-popup" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-member">
+                <div class="modal-content">
+                    <div class="modal-header" style="border:none;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4>Suggestion</h4>
+                    </div>
+                    <div class="modal-body" style="padding:0px;">
+
+                        <div id="suggestion-container" style="height:300px; overflow-y:auto;">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+  <footer>
+            <p>&copy; <span id="c-date"></span> - Than Lwin Aung</p>
+        </footer>
+
+    </div>
+
+	<script>
+	
+		$(document).ready(function(){
+		
+		
+			var date = new Date();
+			var year = date.getFullYear();
+			
+			$("#c-date").html(year);
+			
+			$("#forward-container").jqForwardK({});
+			
+			
+		});
+	</script>
+</body>
+</html>
