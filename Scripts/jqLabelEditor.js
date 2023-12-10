@@ -1,11 +1,11 @@
 
 /**
  * @summary     Label Editor
- * @description Visualization for Myanmar Vector Map with States and Townships
+ * @description Visualization for Polygons
  * @version     1.0.3
  * @file        jqLabelEditor
  * @author      2KHA 
- * @contact     tlaung@gmail.com
+ * @contact     tla.atc.co.nl@gmail.com
  * @copyright   Copyright (C) Mango AI.
  *
  * This source file is free software, available under the following license:
@@ -15,7 +15,7 @@
  * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
  * or FITNESS FOR A PARTICULAR PURPOSE. See the license files for details.
  *
- * For details please refer to: https://github.com/2kha/Visualizations/tree/main/Myanmar%20Vector%20Map
+ * For details please refer to: https://2kha.github.io
  */
 
 
