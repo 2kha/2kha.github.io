@@ -66,76 +66,75 @@
     </header>
     <div  id="main-body" class="container body-content">
        
-        <div class="container-wrap">
-    <div class="main-content offset" style="padding-top:20px !important;">
+	<div class="container-wrap">
+		<div class="main-content offset" style="padding-top:20px !important;">
 
        
-        <br />
-        <br />
-		
-		<div class="row box-3">
-            <div class="col-md-12">
-                <div>
-			<h3>Forward and Inverse Kinematics</h3>
-			<hr>
+			<br />
+			<br />
 			
-			<p>
-				In Classical Mechanics, Dynamics invloves motions of bodies with respect to Forces, while Kinematics involves motions of bodies without consideration of Forces. Forward and Inverse Kinematics involves the motion of limbs (links) by rotation of joints (connectors). In fact, it is the transformatin of Joint Space to Task Space. What is really interesting about Forward and Inverse Kinematics is it is where Art (Animation) and Engineering (Robotics) intersects.
-			</p>
-
-			<br>
-					
-					<img src="https://raw.githubusercontent.com/2kha/2kha.github.io/master/Images/fbkinematics.png" style="width:80%; height:auto; display:inline-block; margin-top:-10px;" />	
-		</div>
-            </div>
-        </div>
-	<br />
-	    <div class="row box-3">
-            <div class="col-md-12">
-                <div>
-                    
-					<h3>Forward Kinematics</h3>
-					<hr>
-					
-					<p>
-						Forward Kinematics only considers the transformation from Joint Space to Task Space. However, there could be a series of N Limbs (Links) connected by M Joints (Connectors). Therefore, the final position of the end effector is dependent on the individual of rotatons of different joints. Then, the calculation of final position invovles:
-					</p>
-
+			<div class="row box-3">
+				<div class="col-md-12">
+					<div>
+				<h3>Forward and Inverse Kinematics</h3>
+				<hr>
 				
-					<br>
-					
-					<img src="https://raw.githubusercontent.com/2kha/2kha.github.io/master/Images/jointspace.png" style="width:80%; height:auto; display:inline-block; margin-top:-10px;" />					
+				<p>
+					In Classical Mechanics, Dynamics invloves motions of bodies with respect to Forces, while Kinematics involves motions of bodies without consideration of Forces. Forward and Inverse Kinematics involves the motion of limbs (links) by rotation of joints (connectors). In fact, it is the transformatin of Joint Space to Task Space. What is really interesting about Forward and Inverse Kinematics is it is where Art (Animation) and Engineering (Robotics) intersects.
+				</p>
+
+				<br>
+						
+						<img src="https://raw.githubusercontent.com/2kha/2kha.github.io/master/Images/fbkinematics.png" style="width:80%; height:auto; display:inline-block; margin-top:-10px;" />	
+			</div>
 				</div>
-            </div>
-        </div>
-		
-		<br />	
+			</div>
+		<br />
+			<div class="row box-3">
+				<div class="col-md-12">
+					<div>
+						
+						<h3>Forward Kinematics</h3>
+						<hr>
+						
+						<p>
+							Forward Kinematics only considers the transformation from Joint Space to Task Space. However, there could be a series of N Limbs (Links) connected by M Joints (Connectors). Therefore, the final position of the end effector is dependent on the individual of rotatons of different joints. Then, the calculation of final position invovles:
+						</p>
 
-
-	    <div class="row box-3">
-            <div class="col-md-12">
-                <div>
-                    
-					<h3>Skeletal Animation</h3>
-					<hr>
 					
-					<p>
-						Skeletal Animation is actually to animate an 3D Model by rotating its joints. However, just rotation of joints is not enough as the vertices of 3D Model can be deformed, and therefore, there are some solutions with <a href="https://ocw.mit.edu/courses/6-837-computer-graphics-fall-2012/9ab6e7460a5b93d6f97b08f95de23ebc_MIT6_837F12_Lec06.pdf" target="_blank" style="color:blue;">skinning<a/> the meshes of 3D Model to its joints. For more information, please visit <a href="https://learnopengl.com/Guest-Articles/2020/Skeletal-Animation" target="_blank" style="color:blue;">OpenGL</a>.
-					</p>
-
-				
-					<br>
-					 <div class="col-md-6">
-                    
-					
-					<img src="https://raw.githubusercontent.com/2kha/2kha.github.io/master/Images/frame1.png" style="width:100%; height:auto; display:inline-block; margin-top:-10px;" />	
-				
+						<br>
+						
+						<img src="https://raw.githubusercontent.com/2kha/2kha.github.io/master/Images/jointspace.png" style="width:80%; height:auto; display:inline-block; margin-top:-10px;" />					
 					</div>
-					<div class="col-md-6">
-					<img src="https://raw.githubusercontent.com/2kha/2kha.github.io/master/Images/frame2.png" style="width:100%; height:auto; display:inline-block; margin-top:-10px;" />					
 				</div>
+			</div>
+			
+			<br />	
+
+
+			<div class="row box-3">
+				<div class="col-md-12">
+					<div>
+						
+						<h3>Skeletal Animation</h3>
+						<hr>
+						
+						<p>
+							Skeletal Animation is actually to animate an 3D Model by rotating its joints. However, just rotation of joints is not enough as the vertices of 3D Model can be deformed, and therefore, there are some solutions with <a href="https://ocw.mit.edu/courses/6-837-computer-graphics-fall-2012/9ab6e7460a5b93d6f97b08f95de23ebc_MIT6_837F12_Lec06.pdf" target="_blank" style="color:blue;">skinning<a/> the meshes of 3D Model to its joints. For more information, please visit <a href="https://learnopengl.com/Guest-Articles/2020/Skeletal-Animation" target="_blank" style="color:blue;">OpenGL</a>.
+						</p>
+
+					
+						<br>
+						 <div class="col-md-6">					
+						
+							<img src="https://raw.githubusercontent.com/2kha/2kha.github.io/master/Images/frame1.png" style="width:100%; height:auto; display:inline-block; margin-top:-10px;" />	
+					
+						</div>
+						<div class="col-md-6">
+							<img src="https://raw.githubusercontent.com/2kha/2kha.github.io/master/Images/frame2.png" style="width:100%; height:auto; display:inline-block; margin-top:-10px;" />					
+						</div>
 					</div>
-            </div>
+				</div>
         </div>
 		
 		<br />	
@@ -154,6 +153,7 @@
 		<br />	
 		
 		<div class="row">
+			<div class="col-sm-12" style="padding:0px !important;">
 			<div class="col-sm-2">
 				<div id="hyper-parameters" class="box-3" style="padding:0px; padding-top:40px; overflow:auto; height:505px;">
 
@@ -236,22 +236,25 @@
 							 </g>
 						</svg>
 				   </div>
-					
+				</div>
 				</div>
 			</div>
 		</div>		
-	 </div>
-		<br/>
+	</div>
+	
+	<br/>
 
-       <div class="row box-3">
-            <div class="col-md-12">
-                <div>
-                    <svg height="32" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
-                    <a href="https://github.com/2kha" target="_blank" style="margin-left:50px; margin-top:-35px; display:block;">Please find me more on Github...</a>
-                </div>
-            </div>
-        </div>       
-		<br />
+   <div class="row box-3">
+		<div class="col-md-12">
+			<div>
+				<svg height="32" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+				<a href="https://github.com/2kha" target="_blank" style="margin-left:50px; margin-top:-35px; display:block;">Please find me more on Github...</a>
+			</div>
+		</div>
+	</div>  
+		
+	<br />
+	
     </div>
 	
 	<br />
