@@ -154,103 +154,92 @@
 		<br />	
 		
 		<div class="row">
+			<div class="col-sm-2">
+				<div id="hyper-parameters" class="box-3" style="padding:0px; padding-top:40px; overflow:auto; height:505px;">
 
-                            <div class="col-sm-2">
+					<div class="row" style="margin-left:0px; margin-right:0px; margin-top:20px;">
+						
+							<div class="col-sm-3">
+								<label class="col-sm-12 control-label">A</label>
+							</div>
+							<div class="col-sm-8">
+								<input type="range" class="rotate form-range" min="180" max="360" step="0.001" style="margin-top:7px;" id="joint-1">
+							</div>
+						
+					</div>
 
-                               
+					<div class="row" style="margin-left:0px; margin-right:0px; margin-top:20px;">
+					   
+							<div class="col-sm-3">
+								<label class="col-sm-12 control-label">B</label>
+							</div>
+							<div class="col-sm-8">
+								<input type="range" class="rotate form-range" min="0" max="360" step="0.001" style="margin-top:7px;" id="joint-2">
+							</div>
+						
+					</div>
 
-                                <div id="hyper-parameters" class="box-3" style="padding:0px; padding-top:40px; overflow:auto; height:505px;">
-
-                                    <div class="row" style="margin-left:0px; margin-right:0px; margin-top:20px;">
-                                        
-                                            <div class="col-sm-3">
-                                                <label class="col-sm-12 control-label">A</label>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <input type="range" class="rotate form-range" min="180" max="360" step="0.001" style="margin-top:7px;" id="joint-1">
-                                            </div>
-                                        
-                                    </div>
-
-                                    <div class="row" style="margin-left:0px; margin-right:0px; margin-top:20px;">
-                                       
-                                            <div class="col-sm-3">
-                                                <label class="col-sm-12 control-label">B</label>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <input type="range" class="rotate form-range" min="0" max="360" step="0.001" style="margin-top:7px;" id="joint-2">
-                                            </div>
-                                        
-                                    </div>
-
-                                    <div class="row" style="margin-left:0px; margin-right:0px; margin-top:20px;">
-                                       
-                                            <div class="col-sm-3">
-                                                <label class="col-sm-12 control-label">C</label>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <input type="range" class="rotate form-range" min="0" max="360" step="0.001" style="margin-top:7px;" id="joint-3">
-                                            </div>
-                                       
-                                    </div>
-									
-									 <div class="row" style="margin-left:0px; margin-right:0px; margin-top:20px;">
-                                       
-                                            <div class="col-sm-3">
-                                                <label class="col-sm-12 control-label">D</label>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <input type="range" class="rotate form-range" min="0" max="360" step="0.001" style="margin-top:7px;" id="joint-4">
-                                            </div>
-                                       
-                                    </div>
-
-                                   
-                                </div>
+					<div class="row" style="margin-left:0px; margin-right:0px; margin-top:20px;">
+					   
+							<div class="col-sm-3">
+								<label class="col-sm-12 control-label">C</label>
+							</div>
+							<div class="col-sm-8">
+								<input type="range" class="rotate form-range" min="0" max="360" step="0.001" style="margin-top:7px;" id="joint-3">
+							</div>
+					   
+					</div>
+					
+					 <div class="row" style="margin-left:0px; margin-right:0px; margin-top:20px;">
+					   
+							<div class="col-sm-3">
+								<label class="col-sm-12 control-label">D</label>
+							</div>
+							<div class="col-sm-8">
+								<input type="range" class="rotate form-range" min="0" max="360" step="0.001" style="margin-top:7px;" id="joint-4">
+							</div>
+					   
+					</div>				   
+				</div>
+			</div>
 
 
+			<div id="forward-container" class="col-sm-10">
 
-                            </div>
+				
+				<div class="row" style="margin-left:0px; margin-right:0px; margin-top:0px;">
 
+					<div id="result" class="box-3 grid-background" style="padding:0px; overflow:auto; height:505px;">
+						<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
 
-                            <div id="forward-container" class="col-sm-10">
-
-                                
-                                <div class="row" style="margin-left:0px; margin-right:0px; margin-top:0px;">
-
-                                    <div id="result" class="box-3 grid-background" style="padding:0px; overflow:auto; height:505px;">
-										<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
-
-											 
-										  <g id="limb">
-												<g id="lq1"  transform="rotate(280 380.89999 81.19999)">
-													<ellipse ry="20" rx="19.5" id="q1" cy="81.19999" cx="380.89999" stroke="#000" fill="#AF84A3"/>
-													<rect id="l1" height="6" width="91.00001" y="79.2" x="287.4" stroke="#000" fill="#B8874D"/>
-												
-													<g id="lq2" transform="rotate(280 286.89999 81.19999)">
-														<ellipse ry="20" rx="19.5" id="q2" cy="81.19999" cx="286.89999" stroke="#000" fill="#AF84A3"/>
-														<rect id="l2" height="6" width="91.00001" y="79.2" x="193.4" stroke="#000" fill="#B8874D"/>
-												
-														<g id="lq3" transform="rotate(80 192.89999 81.19999)">
-															<ellipse ry="20" rx="19.5" id="q3" cy="81.19999" cx="192.89999" stroke="#000" fill="#AF84A3"/>
-															<rect id="l3" height="6" width="91.00001" y="79.2" x="99.4" stroke="#000" fill="#B8874D"/>
-												
-															<g id="lq4" transform="rotate(300 94.89999 81.19999)">
-																<ellipse ry="20" rx="19.5" id="q4" cy="81.199999" cx="94.89999" stroke="#000" fill="#AF84A3"/>
-																<rect id="l4" height="6" width="91.00001" y="79.2" x="0.4" stroke="#000" fill="#B8874D"/>
-															</g>
-														</g>
-													</g>
-												</g>
-											 </g>
-										</svg>
-								   </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-	
-		
+							 
+						  <g id="limb">
+								<g id="lq1"  transform="rotate(280 380.89999 81.19999)">
+									<ellipse ry="20" rx="19.5" id="q1" cy="81.19999" cx="380.89999" stroke="#000" fill="#AF84A3"/>
+									<rect id="l1" height="6" width="91.00001" y="79.2" x="287.4" stroke="#000" fill="#B8874D"/>
+								
+									<g id="lq2" transform="rotate(280 286.89999 81.19999)">
+										<ellipse ry="20" rx="19.5" id="q2" cy="81.19999" cx="286.89999" stroke="#000" fill="#AF84A3"/>
+										<rect id="l2" height="6" width="91.00001" y="79.2" x="193.4" stroke="#000" fill="#B8874D"/>
+								
+										<g id="lq3" transform="rotate(80 192.89999 81.19999)">
+											<ellipse ry="20" rx="19.5" id="q3" cy="81.19999" cx="192.89999" stroke="#000" fill="#AF84A3"/>
+											<rect id="l3" height="6" width="91.00001" y="79.2" x="99.4" stroke="#000" fill="#B8874D"/>
+								
+											<g id="lq4" transform="rotate(300 94.89999 81.19999)">
+												<ellipse ry="20" rx="19.5" id="q4" cy="81.199999" cx="94.89999" stroke="#000" fill="#AF84A3"/>
+												<rect id="l4" height="6" width="91.00001" y="79.2" x="0.4" stroke="#000" fill="#B8874D"/>
+											</g>
+										</g>
+									</g>
+								</g>
+							 </g>
+						</svg>
+				   </div>
+					
+				</div>
+			</div>
+		</div>		
 
 		<br/>
 
@@ -261,20 +250,18 @@
                     <a href="https://github.com/2kha" target="_blank" style="margin-left:50px; margin-top:-35px; display:block;">Please find me more on Github...</a>
                 </div>
             </div>
-        </div>
-
-        <br />
+        </div>       
 		</div>
     </div>
+	<br />
+	<br />
+	<hr />
 
-	 <br />
-        <hr />
+	<footer>
+		<p>&copy; <span id="c-date"></span> - Than Lwin Aung</p>
+	</footer>
 
-  	<footer>
-            <p>&copy; <span id="c-date"></span> - Than Lwin Aung</p>
-        </footer>
-
-    </div>
+</div>
 
 	<script>
 	
