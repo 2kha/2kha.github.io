@@ -177,7 +177,7 @@
                 var dx = Math.abs(fx - x);
                 var dy = Math.abs(fy - y);
 
-                var overlap = dx <= 5 || dy <= 5;
+                var overlap = dx <= 5 && dy <= 5;
 
                 if (overlap) {
 
@@ -788,8 +788,6 @@
                             var drx = reshapeX - e.pageX;
                             var dry = reshapeY - e.pageY;
 
-                            debugger;
-
                             adjustPolygonGroup(group, self.handle, self.links, drx, dry);
 
                             reshapeX = e.pageX;
@@ -1005,8 +1003,11 @@
 
         var initMap = function (displayBack) {
 
-            $(map).append('<span class="map-zoomin">+</span>');
-            $(map).append('<span class="map-zoomout">−</span>');
+             $(map).append('<span class="map-zoomin" style="display:none;">+</span>');
+             $(map).append('<span class="map-zoomout" style="display:none;">−</span>');
+            
+              $(map).append('<span class="map-delete">×</span>');
+              $(map).append('<span class="map-polygon" style="display:none;">&#10022;</span>');
 
             $(map).append('<span class="map-polygon">&#10022;</span>');
 
