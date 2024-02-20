@@ -9,13 +9,12 @@
  * @copyright   Copyright (C) Mango AI.
  *
  * This source file is free software, available under the following license:
- *    GNU GENERAL PUBLIC LICENSE license - https://2kha.github.io
+ *    GNU GENERAL PUBLIC LICENSE license - https://github.com/2kha/Visualizations/blob/main/LICENSE
  *
  * This source file is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
  * or FITNESS FOR A PARTICULAR PURPOSE. See the license files for details.
- *
- * For details please refer to: https://2kha.github.io
+ * 
  */
 
 
@@ -29,6 +28,11 @@
 
         var selectable = false;
 
+        options = options || {};
+
+        options.mode = options.mode || 1;
+
+
         var shape = false;
 
         var origin = {
@@ -37,6 +41,8 @@
             dx: 0,
             dy: 0
         };
+
+        
 
         var applyZoom = function (element, scale) {
             $(element).attr('transform', 'scale(' + scale + ')');
@@ -787,7 +793,7 @@
 
                             var drx = reshapeX - e.pageX;
                             var dry = reshapeY - e.pageY;
-
+                         
                             adjustPolygonGroup(group, self.handle, self.links, drx, dry);
 
                             reshapeX = e.pageX;
@@ -928,7 +934,7 @@
                                     self.handle = d3.select(this);
 
                                     var cx = parseInt(self.handle.attr("cx"));
-                                    var cy = parseInt(self.handle.attr("cy"));
+                                    var cy = parseInt(self.handle.attr("cy"));                                  
 
                                     var parent = d3.select(self.handle.node().parentNode);
 
@@ -998,20 +1004,28 @@
                 $(this).toggleClass("marked");
 
             });
+
+            $(".map-delete").on("click", function () {
+
+                $(map).find(".selected").remove();
+
+            });
         }
 
 
         var initMap = function (displayBack) {
 
-             $(map).append('<span class="map-zoomin" style="display:none;">+</span>');
-             $(map).append('<span class="map-zoomout" style="display:none;">−</span>');
-            
-              $(map).append('<span class="map-delete">×</span>');
-              $(map).append('<span class="map-polygon" style="display:none;">&#10022;</span>');
-
+            $(map).append('<span class="map-delete">×</span>');
             $(map).append('<span class="map-polygon">&#10022;</span>');
 
-            $(map).append('<div class="map-label" style="display: none;"></div>');
+            if (options.mode == 1) {
+                shape = true;
+                $(".map-polygon").click();
+            }
+            else {
+                shape = false;
+                $(".map-polygon").click();
+            }
 
             svg = $(map).find('svg').eq(0);
 
