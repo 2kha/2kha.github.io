@@ -1,0 +1,266 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Than Lwin Aung</title>
+
+	<link rel="stylesheet" href="./Content/font-awesome.min.css" />
+    <link rel="stylesheet" href="./Content/custom.css" />
+    <link rel="stylesheet" href="./Content/material-icons.css" type='text/css' media='all' />
+    <link href="./Content/style.css" rel="stylesheet" />
+    <link href="./Content/chosen.css" rel="stylesheet" />
+    <link href="./Content/railroad-diagrams.css" rel="stylesheet" />
+    <link href="./Content/jquery.webui-popover.css" rel="stylesheet" />
+
+
+
+    <script type='text/javascript' src="./Scripts/modernizr-2.6.2.js"></script>
+    <script type='text/javascript' src="./Scripts/jquery-1.10.2.js"></script>
+    <script type='text/javascript' src="./Scripts/bootstrap.js"></script>
+    <script type='text/javascript' src="./Scripts/railroad-diagrams.js"></script>
+    <script type='text/javascript' src="./Scripts/jquery.change.type.js"></script>
+    <script type='text/javascript' src="./Scripts/underscore.js"></script>
+    <script src="./Scripts/jquery.webui-popover.js"></script>
+    <script src="./Scripts/chosen.jquery.js"></script>
+
+
+</head>
+<body>
+
+    <header class="noo-header" id="noo-header">
+        <div class="navbar-wrapper">
+            <div class="navbar navbar-default fixed-top shrinkable">
+                <div class="container-boxed max">
+                    <div class="navbar-header">
+                        <h1 class="sr-only">Research Areas</h1>
+
+                        
+                        <a class="navbar-toggle main-toggle collapsed" style="height:auto; line-height:50px;" title="Main Menu" data-toggle="collapse" data-target=".noo-navbar-collapse">
+                            <span class="sr-only">Navigation</span>
+                            <i style="font-size:20px;" class="fa fa-bars"></i>
+                        </a>
+                    </div>
+
+
+                    <nav class="collapse navbar-collapse noo-navbar-collapse">
+                        <ul class="navbar-nav sf-menu">
+                            <li class="current-menu-item align-left">
+                                <a href="./index.html">Home</a>
+                            </li>
+
+                            <li class="align-left">
+                                <a href="./about.html">About Me</a>
+                            </li>
+
+
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div  id="main-body" class="container body-content">
+       
+        <div class="container-wrap">
+    <div class="main-content offset" style="padding-top:20px !important;">
+
+       
+        <br />
+        <br />
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+					<h3>Active Learning</h3>
+					<hr>
+					
+					<p>
+						Although our Text Recognition Model is trained with around 80 millions images, it is still not possible to recognize all possible Text Images out there in the world.
+						So, if there is a situation when a text is not recognizable, what should we do? Do we have to retrain the model from scratch again?
+					</p>
+					
+					<p>
+						Well, just because we come across something we don't know, it does not necessarily mean that we have to relearn everything from scratch, do we?
+						We just need to learn a little more about what we don't know yet. For the next bactch of our learning, we just need to include what we don't know yet.
+					</p>
+					
+					<p>
+						And of course, it is <a href="https://en.wikipedia.org/wiki/Active_learning_(machine_learning)" target="_blank">"Active Learning"</a> - the model will predict what it does not know, and wrong predictions will be included in the next batch of training until it learns what it was known before.
+						With Active Learning, we can make our model continuously learn; however, it is a human-in-the-loop method and human's intervention and annotations are highly important. 
+					</p>
+										
+				</div>
+            </div>
+        </div>
+		
+		<br />
+		
+	
+		<br/>
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                   <strong>Prediction Result</strong>
+				</div>
+            </div>
+        </div>
+		<div>
+			<div class="row box-3" style="padding:0px;">
+                                    <div class="col-sm-6" style="padding:0px;">
+                                        <div id="region" class="box-3 grid-background" style="height:700px; width:100%;">
+                                            <svg width="100%" height="100%" style="">
+                                                <image preserveAspectRatio="xMidYMid meet" id="src-image" href="https://raw.githubusercontent.com/2kha/2kha.github.io/master/Images/scene3.jpg" height="100%" width="500" x="0" y="0"></image>
+                                            <g class="group" x="267.58331298828125" y="251.89999389648438" transform="translate(1, -2) rotate(0,357.58331298828125,275.8999938964844)" id="g-0"><rect class="box" x="267" y="251" width="180" height="48" style="cursor:pointer;fill:blue;stroke:blue;stroke-width:1;fill-opacity:0.1;stroke-opacity:0.9"></rect><circle class="handle tpl" cx="267" cy="251" r="3" style="display:none;"></circle><circle class="handle tpr" cx="447" cy="251" r="3" style="display:none;"></circle><circle class="handle bml" cx="447" cy="299" r="3" style="display:none;"></circle><circle class="handle bmr" cx="267" cy="299" r="3" style="display:none;"></circle><line x1="357" y1="251" x2="357" y2="211" class="joint" style="display:none;"></line><circle class="knot" cx="357" cy="211" r="5" style="display:none;"></circle></g><g class="group" x="322.58331298828125" y="326.8999938964844" transform="translate(0,0) rotate(0)" id="g-1"><rect class="box" x="322" y="326" width="176" height="90" style="cursor:pointer;fill:blue;stroke:blue;stroke-width:1;fill-opacity:0.1;stroke-opacity:0.9"></rect><circle class="handle tpl" cx="322" cy="326" r="3" style="display:none;"></circle><circle class="handle tpr" cx="498" cy="326" r="3" style="display:none;"></circle><circle class="handle bml" cx="498" cy="416" r="3" style="display:none;"></circle><circle class="handle bmr" cx="322" cy="416" r="3" style="display:none;"></circle><line x1="410" y1="326" x2="410" y2="286" class="joint" style="display:none;"></line><circle class="knot" cx="410" cy="286" r="5" style="display:none;"></circle></g><g class="group selected" x="73.58331298828125" y="268.8999938964844" transform="translate(-70, 4) rotate(-9.735472679138184,165.08331298828125,291.8999938964844)" id="g-2"><rect class="box" x="73" y="262" width="203" height="49" style="cursor:pointer;fill:blue;stroke:blue;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9"></rect><circle class="handle tpl" cx="73" cy="262" r="3" style="fill: blue; stroke: blue; stroke-width: 2px; cursor: nw-resize;"></circle><circle class="handle tpr" cx="276" cy="262" r="3" style="fill: blue; stroke: blue; stroke-width: 2px; cursor: ne-resize;"></circle><circle class="handle bml" cx="276" cy="311" r="3" style="fill: blue; stroke: blue; stroke-width: 2px; cursor: se-resize;"></circle><circle class="handle bmr" cx="73" cy="311" r="3" style="fill: blue; stroke: blue; stroke-width: 2px; cursor: sw-resize;"></circle><line x1="174.5" y1="262" x2="174.5" y2="222" class="joint" style="cursor:move;fill:blue;stroke:blue; cursor:move;"></line><circle class="knot" cx="174.5" cy="222" r="5" style="cursor:move;fill:blue;stroke:blue;stroke-width:2;"></circle></g><g class="group" x="141.58331298828125" y="316.8999938964844" transform="translate(0,0) rotate(0)" id="g-3"><rect class="box" x="141" y="316" width="0" height="1" style="cursor:pointer;fill:blue;stroke:blue;stroke-width:1;fill-opacity:0.1;stroke-opacity:0.9"></rect><circle class="handle tpl" cx="141" cy="316" r="3" style="display:none;"></circle><circle class="handle tpr" cx="141" cy="316" r="3" style="display:none;"></circle><circle class="handle bml" cx="141" cy="317" r="3" style="display:none;"></circle><circle class="handle bmr" cx="141" cy="317" r="3" style="display:none;"></circle><line x1="141" y1="316" x2="141" y2="276" class="joint" style="display:none;"></line><circle class="knot" cx="141" cy="276" r="5" style="display:none;"></circle></g></svg>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6" style="padding:0px;">
+                                        <div id="result" style="width:100%; height:700px; overflow-y:auto">
+
+											<div style="padding:20px;">
+
+													<span class="profile-tag" data-id="g-0.bmp" title="Keyword">
+														အကြိတ်အဖူးအနာ
+													</span>
+													<span class="profile-tag" data-id="g-1.bmp" title="Keyword">
+														ကလိပ္ပါလ်
+													</span>
+													<span class="profile-tag" data-id="g-2.bmp" title="Keyword">
+														ဩလျှေလျှေက်ေပေါ်
+													</span>
+											</div>
+
+										</div>
+                                    </div>
+                                </div>
+		</div>
+		
+		<br/>
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                   <strong>Annotating Unknown Images with Correct Labels</strong>	
+
+				   <hr>
+				   
+				   <p>
+						Our Text Recognition Model is tested with Images in the wild, and if they are not recognizable, the images are then annotated with Correct Labels.
+					</p>
+					<br>
+					
+					<img src="https://raw.githubusercontent.com/2kha/2kha.github.io/master/Images/activelearning_extractedtext.png" style="width:40%; height:auto; display:inline-block; margin-top:-10px;" />					
+				</div>
+            </div>
+        </div>
+	
+		<br/>
+
+	</div>
+
+	<br/>
+
+	<div class="row box-3">
+		<div class="col-md-12">
+			<div>
+				<svg height="32" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+				<a href="https://github.com/2kha" target="_blank" style="margin-left:50px; margin-top:-35px; display:block;">Please find me more on Github...</a>
+			</div>
+		</div>
+	</div>
+
+	<br />
+
+</div>
+
+	<br />
+	<hr />
+
+<footer>
+		<p>&copy; <span id="c-date"></span> - Than Lwin Aung</p>
+	</footer>
+
+</div>
+
+	<script>
+	
+		$(document).ready(function(){
+		
+		
+			var date = new Date();
+			var year = date.getFullYear();
+			
+			$("#c-date").html(year);
+			
+			  $("#syllable-bx-mm").unbind().bind("click", function () {
+
+			  if ($("#syllable-bx-mm").is(":checked")) {
+				  $("#text-bx-mm").prop('checked', false);
+
+				  $(".syllables-mm").show();
+				  $(".labels-mm").hide();
+			  }
+			  else {
+
+				  $("#text-bx-mm").prop('checked', false);
+
+				  $(".syllables-mm").hide();
+				  $(".labels-mm").hide();
+			  }
+		  });
+
+		  $("#text-bx-mm").unbind().bind("click", function () {
+			  if ($("#text-bx-mm").is(":checked")) {
+				  $("#syllable-bx-mm").prop('checked', false);
+
+				  $(".syllables-mm").hide();
+				  $(".labels-mm").show();
+			  }
+			  else {
+				  $("#syllable-bx-mm").prop('checked', false);
+
+
+				  $(".syllables-mm").hide();
+				  $(".labels-mm").hide();
+			  }
+		  });
+		  
+		   $("#syllable-bx-en").unbind().bind("click", function () {
+
+			  if ($("#syllable-bx-en").is(":checked")) {
+				  $("#text-bx-en").prop('checked', false);
+
+				  $(".syllables-en").show();
+				  $(".labels-en").hide();
+			  }
+			  else {
+
+				  $("#text-bx-en").prop('checked', false);
+
+				  $(".syllables-en").hide();
+				  $(".labels-en").hide();
+			  }
+		  });
+
+		  $("#text-bx-en").unbind().bind("click", function () {
+			  if ($("#text-bx-en").is(":checked")) {
+				  $("#syllable-bx-en").prop('checked', false);
+
+				  $(".syllables-en").hide();
+				  $(".labels-en").show();
+			  }
+			  else {
+				  $("#syllable-bx-en").prop('checked', false);
+
+
+				  $(".syllables-en").hide();
+				  $(".labels-en").hide();
+			  }
+		  });
+		});
+	</script>
+</body>
+</html>
