@@ -1,0 +1,175 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Than Lwin Aung</title>
+
+	<link rel="stylesheet" href="./Content/font-awesome.min.css" />
+    <link rel="stylesheet" href="./Content/custom.css" />
+    <link rel="stylesheet" href="./Content/material-icons.css" type='text/css' media='all' />
+    <link href="./Content/style.css" rel="stylesheet" />
+    <link href="./Content/chosen.css" rel="stylesheet" />
+    <link href="./Content/railroad-diagrams.css" rel="stylesheet" />
+    <link href="./Content/jquery.webui-popover.css" rel="stylesheet" />
+
+
+
+    <script type='text/javascript' src="./Scripts/modernizr-2.6.2.js"></script>
+    <script type='text/javascript' src="./Scripts/jquery-1.10.2.js"></script>
+    <script type='text/javascript' src="./Scripts/bootstrap.js"></script>
+    <script type='text/javascript' src="./Scripts/railroad-diagrams.js"></script>
+    <script type='text/javascript' src="./Scripts/jquery.change.type.js"></script>
+    <script type='text/javascript' src="./Scripts/underscore.js"></script>
+    <script src="./Scripts/jquery.webui-popover.js"></script>
+    <script src="./Scripts/chosen.jquery.js"></script>
+
+
+</head>
+<body>
+
+    <header class="noo-header" id="noo-header">
+        <div class="navbar-wrapper">
+            <div class="navbar navbar-default fixed-top shrinkable">
+                <div class="container-boxed max">
+                    <div class="navbar-header">
+                        <h1 class="sr-only">Research Areas</h1>
+
+                        
+                        <a class="navbar-toggle main-toggle collapsed" style="height:auto; line-height:50px;" title="Main Menu" data-toggle="collapse" data-target=".noo-navbar-collapse">
+                            <span class="sr-only">Navigation</span>
+                            <i style="font-size:20px;" class="fa fa-bars"></i>
+                        </a>
+                    </div>
+
+
+                    <nav class="collapse navbar-collapse noo-navbar-collapse">
+                        <ul class="navbar-nav sf-menu">
+                            <li class="current-menu-item align-left">
+                                <a href="./index.html">Home</a>
+                            </li>
+
+                            <li class="align-left">
+                                <a href="./about.html">About Me</a>
+                            </li>
+
+
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div  id="main-body" class="container body-content">
+       
+        <div class="container-wrap">
+    <div class="main-content offset" style="padding-top:20px !important;">
+
+       
+        <br />
+        <br />
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+					<h3>Myanmar GPT (Generative Pre-Trained) Model</h3>
+					<hr>
+					
+					<p>
+						Based on GPT-2 Model, I have tried to pre-trained Myanmar GPT from Scratch for other purposes. The model is pre-trained with 8 Layers, 768 Hidden Units, 8 Heads, 517 Token Lengths and 65,000 Vocabulary Size. 
+					</p>
+					
+					<p>
+						As we can see, with <a href="https://arxiv.org/pdf/1904.09751.pdf" target="_blank" style="color:blue;">Nucleus Sampling</a> the accuracy rate has become a lot better than random sampling when generating text.
+					</p>
+					
+					<p>
+						Dataset is generally curated from Wikipedia and other free sources, with the 4 million sentences (~2.5 GB).
+					</p>
+					
+									
+				</div>
+            </div>
+        </div>
+		
+		<br />
+		 
+		
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+				<iframe width="560" height="600" src="https://www.youtube.com/embed/hqi0IkxcTsg?si=_cHhlyG97wQtDlyW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				
+				</div>
+            </div>
+        </div>
+	
+		
+
+		
+		<br />
+		<br />
+		 
+		<div class="row box-3">
+            <div class="col-md-12">
+                <div>
+                   <h3>Common Occurance of Myanmar Phrases</h3>	
+
+				   <hr>
+					
+					<p>
+						Actually, I have collected around 2 million commonly used Myanmar Phrases and their relative frequency. And the accuracy rate is quite satisfactory. Dataset is available on <a href="https://github.com/2kha/NLP/tree/master/Data" style="color:blue;" target="_blank" >my github</a>.
+					</p>
+									
+				</div>
+            </div>
+        </div>
+
+        <br />
+
+    </div>
+</div>
+      
+
+        <div class="modal fade" id="suggestion-popup" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-member">
+                <div class="modal-content">
+                    <div class="modal-header" style="border:none;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4>Suggestion</h4>
+                    </div>
+                    <div class="modal-body" style="padding:0px;">
+
+                        <div id="suggestion-container" style="height:300px; overflow-y:auto;">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+  <footer>
+            <p>&copy; <span id="c-date"></span> - Than Lwin Aung</p>
+        </footer>
+
+    </div>
+
+	<script>
+	
+		$(document).ready(function(){
+		
+		
+			var date = new Date();
+			var year = date.getFullYear();
+			
+			$("#c-date").html(year);
+		});
+	</script>
+</body>
+</html>
