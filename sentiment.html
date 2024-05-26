@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -206,6 +206,9 @@
 					<p>
 						In V3A Model, Valance and Arousal represent the sentiment function (EO) related to Survival Instincts, while Affinity and Accural represent the sentiment function (ES) related to Social Instincts.
 					</p>
+					<p>
+						Please visit my research for more <a href="https://github.com/2kha/Research" target="_blank">Information</a>.
+					</p>
 					<br>
 					
 					<img src="https://raw.githubusercontent.com/2kha/2kha.github.io/master/Images/emotion_function.png" style="width:80%; height:auto; display:inline-block; margin-top:-10px;" />					
@@ -331,71 +334,7 @@
 			
 			$("#c-date").html(year);
 			
-			  $("#syllable-bx-mm").unbind().bind("click", function () {
-
-			  if ($("#syllable-bx-mm").is(":checked")) {
-				  $("#text-bx-mm").prop('checked', false);
-
-				  $(".syllables-mm").show();
-				  $(".labels-mm").hide();
-			  }
-			  else {
-
-				  $("#text-bx-mm").prop('checked', false);
-
-				  $(".syllables-mm").hide();
-				  $(".labels-mm").hide();
-			  }
-		  });
-
-		  $("#text-bx-mm").unbind().bind("click", function () {
-			  if ($("#text-bx-mm").is(":checked")) {
-				  $("#syllable-bx-mm").prop('checked', false);
-
-				  $(".syllables-mm").hide();
-				  $(".labels-mm").show();
-			  }
-			  else {
-				  $("#syllable-bx-mm").prop('checked', false);
-
-
-				  $(".syllables-mm").hide();
-				  $(".labels-mm").hide();
-			  }
-		  });
-		  
-		   $("#syllable-bx-en").unbind().bind("click", function () {
-
-			  if ($("#syllable-bx-en").is(":checked")) {
-				  $("#text-bx-en").prop('checked', false);
-
-				  $(".syllables-en").show();
-				  $(".labels-en").hide();
-			  }
-			  else {
-
-				  $("#text-bx-en").prop('checked', false);
-
-				  $(".syllables-en").hide();
-				  $(".labels-en").hide();
-			  }
-		  });
-
-		  $("#text-bx-en").unbind().bind("click", function () {
-			  if ($("#text-bx-en").is(":checked")) {
-				  $("#syllable-bx-en").prop('checked', false);
-
-				  $(".syllables-en").hide();
-				  $(".labels-en").show();
-			  }
-			  else {
-				  $("#syllable-bx-en").prop('checked', false);
-
-
-				  $(".syllables-en").hide();
-				  $(".labels-en").hide();
-			  }
-		  });
+			
 		});
 	</script>
 </body>
