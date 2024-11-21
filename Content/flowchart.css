@@ -1,7 +1,5 @@
 .demo {
-    /* for IE10+ touch devices */
-    touch-action:none;
-}
+   }
 
 .flowchart-demo .IfBlock {
  
